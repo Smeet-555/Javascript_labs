@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let str = prompt("Enter any string here");
+        let firstA = str.indexOf('a');
+        let lastA = str.lastIndexOf('a');
+        document.write("the first index of 'a' is "+ firstA);
+        document.write("the last index of 'a' is "+ lastA);
+        let result = str.slice(firstA+1 , lastA)
+        document.write(" "+result)
+    </script>
+<body>
+    </head>
+</body>
+</html>

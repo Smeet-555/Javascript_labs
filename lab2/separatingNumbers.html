@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Digit Power</title>
+  <script>
+    let number = parseInt(prompt("Enter a 2-digit number:"));
+
+
+    if (number >= 10 && number <= 99) {
+      let firstDigit = Math.floor(number / 10);
+      let secondDigit = number % 10;
+      let result = Math.pow(firstDigit, secondDigit);
+
+        document.write(result)
+    } else {
+      alert("Please enter a valid 2-digit number (10 to 99).");
+    }
+  </script>
+</head>
+<body>
+</body>
+</html>

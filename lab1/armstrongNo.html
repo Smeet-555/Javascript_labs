@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let num = parseInt(prompt("Enter any number here"));
+        let noOfDigits = num.toString.length;
+        let rem = 0;
+        let sum = 0;
+
+        while (num > 0) {
+            rem = num % 10;              
+            noOfDigits++
+            num = Math.floor(num / 10);         
+        }
+        while (num>0) {
+            rem = num%10;
+            sum = sum+Math.pow(rem , noOfDigits);
+            num = Math.floor(num/10);
+        }
+        if (sum === num) {
+            alert("Armstrong number")
+        }
+        else{
+            alert("Not an armstrong number")
+        }
+    </script>
+</head>
+<body>
+</body>
+</html>

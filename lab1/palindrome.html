@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Palindrome Checker</title>
+    <script>
+
+        var num = parseInt(prompt("Enter a number:"));
+        var original = num;
+        var reversed = 0;
+
+        while (num > 0) {
+            var digit = num % 10;              
+            reversed = reversed * 10 + digit;  
+            num = Math.floor(num / 10);         
+        }
+
+
+        if (original===reversed) {
+            alert("The number " + original + " is a palindrome.");
+        } else {
+            alert("The number " + original + " is not a palindrome.");
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
