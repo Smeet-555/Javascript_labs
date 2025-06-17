@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    let arr = [];
+    let size = parseInt(prompt("Enter the size of array: "));
+
+    for (let i = 0; i < size; i++) {
+        let element = parseInt(prompt("Enter element " + (i + 1) + ":"));
+        arr.push(element);
+    }
+
+    document.write("The original array is: ");
+    for (let i = 0; i < size; i++) {
+        document.write(arr[i] + " ");
+    }
+
+        for (let i = 0; i < size - 1; i++) {
+        for (let j = 0; j < size-i-1; j++) {
+            if (arr[j+1] < arr[j]) {
+                let temp = arr[j+1];
+                arr[j+1] = arr[j];
+                arr[j] = temp;
+            }
+        }
+    }
+    document.write("<br/>")
+        for (let i = 0; i < size; i++) {
+        document.write(arr[i] + " ");
+    }
+</script>
+<body>
+
+</body>
+</html>
