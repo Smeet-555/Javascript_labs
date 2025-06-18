@@ -1,0 +1,50 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Array Methods Demo</title>
+</head>
+<body>
+    <script>
+        let arr = ["Apple", "Banana", "Cherry"];
+
+        document.write("Original array:", arr);
+        document.write("<br>")
+        document.write("<br>")
+
+        arr.push("Mango");
+        document.write("After push('Mango'):", arr);
+        document.write("<br>")
+        document.write("<br>")
+
+        let removeEnd = arr.pop();
+        document.write("After pop():", arr, "| Removed:", removeEnd);
+        document.write("<br>")
+        document.write("<br>")
+
+        let removeStart = arr.shift();
+        document.write("After shift():", arr, "| Removed:", removeStart);
+        document.write("<br>")
+        document.write("<br>")
+
+        arr.unshift("Grapes");
+        document.write("After unshift('Grapes'):", arr);
+        document.write("<br>")
+        document.write("<br>")
+
+        arr.splice(1, 0, "Orange"); 
+        document.write("After splicing", arr);
+        document.write("<br>")
+        document.write("<br>")
+
+        let removed = arr.splice(2, 1);
+        document.write("After splice(2, 1):", arr, " | Removed:", removed);
+        document.write("<br>")
+        document.write("<br>")
+
+        arr.sort();
+        document.write("After sort():", arr);
+        document.write("<br>")
+    </script>
+</body>
+</html>
