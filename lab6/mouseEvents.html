@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mouse events</title>
+</head>
+<style>
+
+</style>
+<body>
+<button onclick="clickEvent()" id="button">Onclick</button>
+<button ondblclick="dblclickEvent()" id="button">On Doubleclick</button>
+<button onmouseenter="mouseEnter()" id="button">mouse enter</button>
+
+
+<script>
+function clickEvent() {
+    console.log("Onclick event fired")
+}
+function dblclickEvent() {
+    console.log("Double click event fired")
+}
+function mouseEnter() {
+    console.log("Mouse entered")
+}
+</script>
+
+</body>
+</html>
