@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<style>
+.color {
+    color: aquamarine;
+}
+</style>
+
+<body>
+<h1 id="H1">Change the color the heading</h1>
+
+<p>Click "Add Class" to add a class attribute to the h1 element:</p>
+
+<button onclick="changeColor()">Add Class</button>
+
+<script>
+function changeColor() {
+  document.getElementById("H1").setAttribute("class", "color"); 
+}
+</script>
+
+</body>
+</html>
