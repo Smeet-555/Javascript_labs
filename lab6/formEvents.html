@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Country and Form</title>
+</head>
+<body>
+    <label for="country">Select any country: </label>
+    <select name="country" id="cont" onchange="cont()">
+        <option value="USA">USA</option>
+        <option value="INDIA">INDIA</option>
+        <option value="CANADA">CANADA</option>
+        <option value="GERMANY">GERMANY</option>
+    </select>
+    <p id="demo">hello</p>
+
+    <form id="form" onsubmit="submitForm(event)">
+        <label>Username: </label>
+        <input type="text" id="username">
+        <label>Password: </label>
+        <input type="text" id="password">
+        <button type="submit">Submit</button>
+    </form>
+
+    <form onreset="resetForm()">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        <input type="reset" value="Reset">
+    </form>
+
+    <script>
+        function cont() {
+            const selected_country = document.getElementById("cont").value;
+            document.getElementById("demo").innerHTML = "Selected country changed to: " + selected_country;
+        }
+
+        function submitForm(event) {
+            event.preventDefault();
+
+            const username = document.getElementById("username").value.trim();
+            const password = document.getElementById("password").value.trim();
+
+            if (username === "" || password === "") {
+                alert("All fields are required to be filled");
+                return;
+            }
+
+            alert("Form submitted successfully");
+        }
+
+        function resetForm() {
+            alert("Form has been reset!");
+        }
+    </script>
+</body>
+</html>

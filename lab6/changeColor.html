@@ -12,14 +12,23 @@
     </style>
 </head>
 <body  id="btn">
-    <button onclick="changeColor()" >Click to change the color</button>
+    <button onclick="startInterval()">Start</button>
+    <button onclick="endinterval()">end</button>
     <script>
+        let c;
         var color = document.getElementById("btn");
         function changeColor(){
             var r = (Math.random()*256)
             var g = (Math.random()*256)
             var b = (Math.random()*256)
             color.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
+        }
+        
+        function startInterval() {
+            c = setInterval(changeColor , 1000)
+        }
+        function endinterval(){
+            clearInterval(c)
         }
     </script>
 </body>
