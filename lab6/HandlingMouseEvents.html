@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mouse events</title>
+</head>
+<style>
+    .button{
+        height: 100px;
+        width: 100px;
+    }
+    .color{
+        color: yellow;
+    }
+</style>
+<body id="btn">
+<button onclick="changeToGreen()" class="button">Green</button>
+<button onclick="changeToRed()" class="button">Red</button>
+
+<h1 id="H1" onmouseover="mouseEnter()" onmouseout="mouseOut()">Change the color the heading</h1>
+
+<button onclick="showDateTime()" id="dateTime">click to see date and time</button>
+
+
+
+<script>
+    let color = document.getElementById("btn")
+function changeToGreen() {
+    color.style.backgroundColor = "green"
+}
+function changeToRed() {
+        color.style.backgroundColor = "red"
+}
+function mouseEnter() {
+  document.getElementById("H1").style.color = "yellow"; 
+}
+function mouseOut() {
+  document.getElementById("H1").style.color = "black"
+}
+
+function showDateTime(){
+const d = new Date("2022-03-25");
+document.getElementById("dateTime").innerHTML = d;
+}
+</script>
+
+</body>
+</html>
