@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<body>
+<p>The result of the calculation is:</p>
+<p id="demo"></p>
+
+<script>
+function displayFunction(some) {
+  document.getElementById("demo").innerHTML = some;
+}
+
+function myCalculator(num1, num2) {
+  let sum = num1 + num2;
+  displayFunction(sum);
+}
+
+myCalculator(5, 5);
+</script>
+
+</body>
+</html>
