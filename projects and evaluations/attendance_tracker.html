@@ -1,0 +1,768 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Student Attendance Tracker</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      background-color: #4242a9;
+    }
+
+    h1 {
+      text-align: center;
+      color: rgb(26, 235, 54);
+    }
+
+    input,
+    button {
+      padding: 10px;
+      margin: 10px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+      background-color: rgb(30, 183, 204);
+    }
+
+    th,
+    td {
+      padding: 12px;
+      border: 1px solid #ccc;
+      text-align: center;
+    }
+
+    th {
+      background-color: #6200ea;
+      color: white;
+    }
+
+    .controls {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .absent-row {
+      background-color: #e71010;
+    }
+
+    #absentList {
+      margin-top: 20px;
+      font-weight: bold;
+      color: #d32f2f;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Student Attendance Tracker</h1>
+
+  <div class="controls">
+    <button onclick="takeAttendance()">Take Attendance</button>
+    <button onclick="allPresent()">All Present</button>
+    <button onclick="allAbsent()">All Absent</button>
+    <button onclick="addAttendance()">Add Attendance</button>
+  </div>
+
+  <table id="attendanceTable">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Roll No</th>
+        <th>Status</th>
+      </tr>
+    </thead>
+    <tbody id="tableBody"></tbody>
+  </table>
+
+  <div id="absentList"></div>
+
+  <script>
+    const students = [
+      { name: "Jiya Kyada", rollNo: 101, enrollmentNo: "24010101151" },
+      { name: "Shah Dhvani Hitesh", rollNo: 102, enrollmentNo: "24010101257" },
+      { name: "Saraya Mohit Haresh", rollNo: 103, enrollmentNo: "24010101251" },
+      {
+        name: "Zalavadiya Heet Siddharth",
+        rollNo: 104,
+        enrollmentNo: "24010101311",
+      },
+      { name: "Darshil Dobariya", rollNo: 105, enrollmentNo: "24010101065" },
+      { name: "Nafisa Gandhi", rollNo: 106, enrollmentNo: "24010101076" },
+      {
+        name: "Vasani Yashvi Niteshbhai",
+        rollNo: 107,
+        enrollmentNo: "24010101299",
+      },
+      {
+        name: "Delvadiya Manavkumar Kirtibhai",
+        rollNo: 108,
+        enrollmentNo: "24010101056",
+      },
+      { name: "Ashara Palak Gopalbhai", rollNo: 109, enrollmentNo: "24010101008" },
+      {
+        name: "Lunagariya Greshi Kamleshbhai",
+        rollNo: 110,
+        enrollmentNo: "24010101158",
+      },
+      {
+        name: "Nanavati Shrushti Gargesh",
+        rollNo: 111,
+        enrollmentNo: "24010101187",
+      },
+      { name: "Ranpara Jay Manishbhai", rollNo: 112, enrollmentNo: "24010101238" },
+      { name: "Disha Mehta", rollNo: 113, enrollmentNo: "24010101173" },
+      {
+        name: "Thummar Niraj Bhaveshbhai",
+        rollNo: 114,
+        enrollmentNo: "24010101282",
+      },
+      {
+        name: "Kachhava Nakul Umeshbhai",
+        rollNo: 115,
+        enrollmentNo: "24010101116",
+      },
+      {
+        name: "Kanabar Urva Darshanbhai",
+        rollNo: 116,
+        enrollmentNo: "24010101124",
+      },
+      { name: "Nakar Dhruvil Hitesh", rollNo: 117, enrollmentNo: "24010101186" },
+      {
+        name: "Poshiya Priyanshi Ajaybhai",
+        rollNo: 118,
+        enrollmentNo: "24010101223",
+      },
+      {
+        name: "Baravalia Dharitri Manharbhai",
+        rollNo: 119,
+        enrollmentNo: "24010101013",
+      },
+      {
+        name: "Muchhara Kashish Hiteshbhai",
+        rollNo: 120,
+        enrollmentNo: "24010101184",
+      },
+      {
+        name: "Chauhan Aditya Sureshbhai",
+        rollNo: 121,
+        enrollmentNo: "24010101038",
+      },
+      { name: "Harsora Sakshi Ajaybhai", rollNo: 122, enrollmentNo: "24010101097" },
+      {
+        name: "Katrodiya Sahil Rajeshbhai",
+        rollNo: 123,
+        enrollmentNo: "24010101139",
+      },
+      {
+        name: "Trambadiya Parikshit Parimalbhai",
+        rollNo: 124,
+        enrollmentNo: "24010101284",
+      },
+      {
+        name: "Padariya Preya Parasbhai",
+        rollNo: 125,
+        enrollmentNo: "24010101192",
+      },
+      {
+        name: "Gambhava Krushiben Manojbhai",
+        rollNo: 126,
+        enrollmentNo: "24010101074",
+      },
+      {
+        name: "Jadeja Vishwrajsinh Krushnasinh",
+        rollNo: 127,
+        enrollmentNo: "24010101107",
+      },
+      { name: "Patel Jiya Sandipbhai", rollNo: 128, enrollmentNo: "24010101214" },
+      {
+        name: "Pipalava Smit Ashvinbhai",
+        rollNo: 129,
+        enrollmentNo: "24010101219",
+      },
+      {
+        name: "Gohil Harshrajsinh Jitendrasinh",
+        rollNo: 130,
+        enrollmentNo: "24010101091",
+      },
+      {
+        name: "Kathiriya Arshi Keshubhai",
+        rollNo: 131,
+        enrollmentNo: "24010101138",
+      },
+      { name: "Undhad Vishwa Rajesh", rollNo: 132, enrollmentNo: "24010101288" },
+      { name: "Diya Raiyani", rollNo: 133, enrollmentNo: "24010101229" },
+      { name: "Chavda Maulik Vinodbhai", rollNo: 134, enrollmentNo: "24010101043" },
+      {
+        name: "Chavda Priyanka Prabodhbhai",
+        rollNo: 135,
+        enrollmentNo: "24010101044",
+      },
+      {
+        name: "Chavda Virendrasinh Ashwinbhai",
+        rollNo: 136,
+        enrollmentNo: "24010101045",
+      },
+      {
+        name: "Galani Krunal Chetanbhai",
+        rollNo: 137,
+        enrollmentNo: "24010101072",
+      },
+      { name: "Kavar Suchi Vasantbhai", rollNo: 138, enrollmentNo: "24010101140" },
+      { name: "Odedara Nilesh Parbat", rollNo: 139, enrollmentNo: "24010101190" },
+      {
+        name: "Vasani Dishita Nikhilkumar",
+        rollNo: 140,
+        enrollmentNo: "24010101298",
+      },
+      {
+        name: "Vachhani Vaishvi Manojkumar",
+        rollNo: 141,
+        enrollmentNo: "24010101290",
+      },
+      {
+        name: "Bhadania Ronit Yatinbhai",
+        rollNo: 142,
+        enrollmentNo: "24010101017",
+      },
+      { name: "Chauhan Jenil Virenbhai", rollNo: 143, enrollmentNo: "24010101039" },
+      {
+        name: "Virpara Krisha Rajeshbhai",
+        rollNo: 144,
+        enrollmentNo: "24010101302",
+      },
+      {
+        name: "Chandra Darshit Hiteshbhai",
+        rollNo: 145,
+        enrollmentNo: "24010101035",
+      },
+      {
+        name: "Detroja Ruchit Arvindbhai",
+        rollNo: 146,
+        enrollmentNo: "24010101057",
+      },
+      {
+        name: "Kapuriya Hepin Pravinbhai",
+        rollNo: 147,
+        enrollmentNo: "24010101131",
+      },
+      { name: "Gohel Smit Ashvinbhai", rollNo: 148, enrollmentNo: "24010101090" },
+      { name: "Patel Kirtan Amitbhai", rollNo: 149, enrollmentNo: "24010101215" },
+      { name: "Ginoya Deep Kantilal", rollNo: 150, enrollmentNo: "24010101085" },
+      {
+        name: "Marvaniya Jainish Dharmendrabhai",
+        rollNo: 151,
+        enrollmentNo: "24010101169",
+      },
+      { name: "Ajudiya Yash Nareshbhai", rollNo: 152, enrollmentNo: "24010101004" },
+      { name: "Manas Borisagar", rollNo: 153, enrollmentNo: "24010101031" },
+      { name: "Joshi Soham Kamleshbhai", rollNo: 154, enrollmentNo: "24010101113" },
+      {
+        name: "Kakadiya Khilan Manishbhai",
+        rollNo: 155,
+        enrollmentNo: "24010101117",
+      },
+      {
+        name: "Sidhdhapura Dhaval Dharmeshbhai",
+        rollNo: 156,
+        enrollmentNo: "24010101265",
+      },
+      {
+        name: "Sitapara Aryan Sunilbhai",
+        rollNo: 157,
+        enrollmentNo: "24010101267",
+      },
+      {
+        name: "Bhatasana Nainshi Pareshbhai",
+        rollNo: 158,
+        enrollmentNo: "24010101021",
+      },
+      {
+        name: "Malvaniya Viraj Jatinbhai",
+        rollNo: 159,
+        enrollmentNo: "24010101163",
+      },
+      { name: "Tanisha Pambhar", rollNo: 160, enrollmentNo: "24010101197" },
+      {
+        name: "Padshala Kuldeep Rajendrakumar",
+        rollNo: 161,
+        enrollmentNo: "24010101196",
+      },
+      {
+        name: "Bhimani Vishva Manishbhai",
+        rollNo: 162,
+        enrollmentNo: "24010101026",
+      },
+      { name: "Karan Anushka Pintubhai", rollNo: 163, enrollmentNo: "24010101132" },
+      { name: "Vyas Kavya Sachin", rollNo: 164, enrollmentNo: "24010101307" },
+      { name: "Kamani Purna Hareshbhai", rollNo: 165, enrollmentNo: "24010101123" },
+      {
+        name: "Mori Nandita Renishkumar",
+        rollNo: 166,
+        enrollmentNo: "24010101183",
+      },
+      {
+        name: "Ratanghayra Pankti Himanshu",
+        rollNo: 167,
+        enrollmentNo: "24010101239",
+      },
+      {
+        name: "Rupala Nikhil Kashmeeraben",
+        rollNo: 168,
+        enrollmentNo: "24010101242",
+      },
+      {
+        name: "Jadeja Shivrajsinh Girirajsinh",
+        rollNo: 169,
+        enrollmentNo: "24010101106",
+      },
+      { name: "Hirva Satani", rollNo: 170, enrollmentNo: "24010101252" },
+      {
+        name: "Raiyani Jenil Sanjaybhai",
+        rollNo: 171,
+        enrollmentNo: "24010101230",
+      },
+      {
+        name: "Chandpa Prince Sureshbhai",
+        rollNo: 172,
+        enrollmentNo: "24010101034",
+      },
+      {
+        name: "Faldu Vrajesh Sanjaybhai",
+        rollNo: 173,
+        enrollmentNo: "24010101069",
+      },
+      {
+        name: "Khambholiya Manya Parasharbhai",
+        rollNo: 174,
+        enrollmentNo: "24010101142",
+      },
+      {
+        name: "Prajapati Kaivalya Samir",
+        rollNo: 175,
+        enrollmentNo: "24010101224",
+      },
+      {
+        name: "Moral Aadit Shaileshbhai",
+        rollNo: 176,
+        enrollmentNo: "24010101182",
+      },
+      {
+        name: "Shihora Vibhu Chetanbhai",
+        rollNo: 177,
+        enrollmentNo: "24010101260",
+      },
+      { name: "Kanani Kruti Jayeshbhai", rollNo: 178, enrollmentNo: "24010101126" },
+      {
+        name: "Karoliya Princekumar Sandipbhai",
+        rollNo: 179,
+        enrollmentNo: "24010101135",
+      },
+      { name: "Khunt Rutvi Hiteshbhai", rollNo: 180, enrollmentNo: "24010101146" },
+      {
+        name: "Charadva Abhishek Virenbhai",
+        rollNo: 181,
+        enrollmentNo: "24010101036",
+      },
+      { name: "Dave Krisha Kalpeshbhai", rollNo: 182, enrollmentNo: "24010101053" },
+      { name: "Janvi Kalaria", rollNo: 183, enrollmentNo: "24010101119" },
+      { name: "Rajwani Rohan Malik", rollNo: 184, enrollmentNo: "24010101232" },
+      {
+        name: "Rana Parthrajsinh Bhupatsinh",
+        rollNo: 185,
+        enrollmentNo: "24010101235",
+      },
+      {
+        name: "Solanki Ronak Arvindbhai",
+        rollNo: 186,
+        enrollmentNo: "24010101271",
+      },
+      {
+        name: "Panchal Vedantkumar Niravbhai",
+        rollNo: 187,
+        enrollmentNo: "24010101198",
+      },
+      {
+        name: "Ambasana Venisha Hitenbhai",
+        rollNo: 188,
+        enrollmentNo: "24010101006",
+      },
+      {
+        name: "Raichura Smeet Rohitkumar",
+        rollNo: 189,
+        enrollmentNo: "24010101228",
+      },
+      {
+        name: "Gambhava Mirali Sureshbhai",
+        rollNo: 190,
+        enrollmentNo: "24010101075",
+      },
+      { name: "Dave Dhruv Viralkumar", rollNo: 191, enrollmentNo: "24010101050" },
+      { name: "Ghetiya Ritu Pankajbhai", rollNo: 192, enrollmentNo: "24010101080" },
+      {
+        name: "Radhanpara Saumya Jatinbhai",
+        rollNo: 193,
+        enrollmentNo: "24010101226",
+      },
+      {
+        name: "Yadav Gaurav Kaushikbhai",
+        rollNo: 194,
+        enrollmentNo: "24010101308",
+      },
+      {
+        name: "Buddhadev Misri Sanjaybhai",
+        rollNo: 195,
+        enrollmentNo: "24010101033",
+      },
+      { name: "Joshi Kairav Paren", rollNo: 196, enrollmentNo: "24010101112" },
+      {
+        name: "Savaliya Dhruvi Bharatbhai",
+        rollNo: 197,
+        enrollmentNo: "24010101253",
+      },
+      { name: "Radhanpura Jeel Nimish", rollNo: 198, enrollmentNo: "24010101227" },
+      {
+        name: "Savaliya Priyanshi Sureshbhai",
+        rollNo: 199,
+        enrollmentNo: "24010101255",
+      },
+      {
+        name: "Zala Bhavyadeepsinh Pruthvirajsinh",
+        rollNo: 200,
+        enrollmentNo: "24010101310",
+      },
+      {
+        name: "Sinha Milankumar Sujitkumar",
+        rollNo: 201,
+        enrollmentNo: "24010101266",
+      },
+      { name: "Lakhtaria Kevin Homin", rollNo: 202, enrollmentNo: "24010101153" },
+      {
+        name: "Moliya Kartavya Bhaveshbhai",
+        rollNo: 203,
+        enrollmentNo: "24010101180",
+      },
+      { name: "Monpara Nij Hareshbhai", rollNo: 204, enrollmentNo: "24010101181" },
+      { name: "Divya Thakar", rollNo: 205, enrollmentNo: "24010101280" },
+      {
+        name: "Mendapara Piyu Amishbhai",
+        rollNo: 206,
+        enrollmentNo: "24010101177",
+      },
+      { name: "Pandya Karan Tusharbhai", rollNo: 207, enrollmentNo: "24010101199" },
+      { name: "Raval Meet Mohitkumar", rollNo: 208, enrollmentNo: "24010101241" },
+      {
+        name: "Virpariya Heer Manishbhai",
+        rollNo: 209,
+        enrollmentNo: "24010101303",
+      },
+      { name: "Bhanushali Hiral Bhaven", rollNo: 210, enrollmentNo: "24010101020" },
+      {
+        name: "Kamaliya Akashkumar Rameshbhai",
+        rollNo: 211,
+        enrollmentNo: "24010101121",
+      },
+      { name: "Popat Honey Nileshbhai", rollNo: 212, enrollmentNo: "24010101222" },
+      {
+        name: "Badrakiya Meet Bharatbhai",
+        rollNo: 213,
+        enrollmentNo: "24010101009",
+      },
+      { name: "Kanani Kavit Nareshbhai", rollNo: 214, enrollmentNo: "24010101125" },
+      {
+        name: "Ambaliya Manan Jayeshbhai",
+        rollNo: 215,
+        enrollmentNo: "24010101005",
+      },
+      { name: "Hinsu Umang Bharatbhai", rollNo: 216, enrollmentNo: "24010101099" },
+      {
+        name: "Kakaniya Bhavy Niteshbhai",
+        rollNo: 217,
+        enrollmentNo: "24010101118",
+      },
+      { name: "Padia Kartik Balkrishna", rollNo: 218, enrollmentNo: "24010101195" },
+      {
+        name: "Mankada Hasan Shabbirhusain",
+        rollNo: 219,
+        enrollmentNo: "24010101166",
+      },
+      {
+        name: "Mehta Dhairy Kalpeshbhai",
+        rollNo: 220,
+        enrollmentNo: "24010101172",
+      },
+      { name: "Mehta Het Lalitkumar", rollNo: 221, enrollmentNo: "24010101174" },
+      { name: "Kahan Sanghani", rollNo: 222, enrollmentNo: "24010101246" },
+      {
+        name: "Gotani Himesh Sanjaybhai",
+        rollNo: 223,
+        enrollmentNo: "24010101095",
+      },
+      { name: "Narola Yash Nileshbhai", rollNo: 224, enrollmentNo: "24010101189" },
+      {
+        name: "Targata Dharmishtha Arjanbhai",
+        rollNo: 225,
+        enrollmentNo: "24010101279",
+      },
+      {
+        name: "Bhuva Tirth Shaileshbhai",
+        rollNo: 226,
+        enrollmentNo: "24010101030",
+      },
+      {
+        name: "Jadeja Yashraj Lakhdhirsinh",
+        rollNo: 227,
+        enrollmentNo: "24010101108",
+      },
+      { name: "Krisha Pujara", rollNo: 228, enrollmentNo: "24010101225" },
+      { name: "Varsani Ritul Hirji", rollNo: 229, enrollmentNo: "24010101296" },
+      { name: "Parmar Dhyey Dharmendra", rollNo: 230, enrollmentNo: "24010101208" },
+      {
+        name: "Shingala Mansi Rajeshbhai",
+        rollNo: 231,
+        enrollmentNo: "24010101263",
+      },
+      {
+        name: "Dobariya Jeel Upendrabhai",
+        rollNo: 232,
+        enrollmentNo: "24010101066",
+      },
+      {
+        name: "Khant Mannkumar Jigneshbhai",
+        rollNo: 233,
+        enrollmentNo: "24010101143",
+      },
+      { name: "Yadav Neel Hiteshbhai", rollNo: 234, enrollmentNo: "24010101309" },
+      {
+        name: "Andodariya Yash Maheshbhai",
+        rollNo: 235,
+        enrollmentNo: "24010101007",
+      },
+      {
+        name: "Hirani Jeelkumar Sanjaybhai",
+        rollNo: 236,
+        enrollmentNo: "24010101101",
+      },
+      {
+        name: "Mankad Shyamsundar Mitbhai",
+        rollNo: 237,
+        enrollmentNo: "24010101165",
+      },
+      { name: "Agavan Rohan Farukbhai", rollNo: 238, enrollmentNo: "24010101001" },
+      { name: "Bhadja Zeel Satishkumar", rollNo: 239, enrollmentNo: "24010101018" },
+      {
+        name: "Shreya Vijaybhai Bhundia",
+        rollNo: 240,
+        enrollmentNo: "24010101028",
+      },
+      { name: "Aghara Keyur Hiteshbhai", rollNo: 241, enrollmentNo: "24010101002" },
+      {
+        name: "Buddhadev Deep Nitinbhai",
+        rollNo: 242,
+        enrollmentNo: "24010101032",
+      },
+      { name: "Godham Meet Maheshbhai", rollNo: 243, enrollmentNo: "24010101086" },
+      {
+        name: "Katariya Trisha Ashvinbhai",
+        rollNo: 244,
+        enrollmentNo: "24010101137",
+      },
+      { name: "Vekariya Jay Bipinbhai", rollNo: 245, enrollmentNo: "24010101301" },
+      { name: "Rutvi Gautami", rollNo: 246, enrollmentNo: "24010101077" },
+      {
+        name: "Sankaliya Aryan Ashokbhai",
+        rollNo: 247,
+        enrollmentNo: "24010101247",
+      },
+      {
+        name: "Ghadiya Yashvi Sanjaybhai",
+        rollNo: 248,
+        enrollmentNo: "24010101078",
+      },
+      { name: "Ved Chatvani", rollNo: 249, enrollmentNo: "24010101037" },
+      { name: "Ghorai Swati Sanjib", rollNo: 250, enrollmentNo: "24010101084" },
+      {
+        name: "Karena Radhika Bharatbhai",
+        rollNo: 251,
+        enrollmentNo: "24010101134",
+      },
+      { name: "Pandya Kruti Tusharbhai", rollNo: 252, enrollmentNo: "24010101200" },
+      {
+        name: "Patel Tejkumar Niteshbhai",
+        rollNo: 253,
+        enrollmentNo: "24010101218",
+      },
+      {
+        name: "Sagpariya Mahee Nitinbhai",
+        rollNo: 254,
+        enrollmentNo: "24010101244",
+      },
+      {
+        name: "Sherasiya Shyam Sureshbhai",
+        rollNo: 255,
+        enrollmentNo: "24010101258",
+      },
+      { name: "Liya Hirvita Rajendra", rollNo: 256, enrollmentNo: "24010101157" },
+      { name: "Ahir Krishna Manishbhai", rollNo: 257, enrollmentNo: "24010101003" },
+      {
+        name: "Parmar Devanshu Gopalbhai",
+        rollNo: 258,
+        enrollmentNo: "24010101206",
+      },
+      { name: "Tivari Astha Sureshbhai", rollNo: 259, enrollmentNo: "24010101283" },
+      { name: "Pal Kana Odedra", rollNo: 260, enrollmentNo: "24010101191" },
+      {
+        name: "Sorathiya Nabhag Sanjaybhai",
+        rollNo: 261,
+        enrollmentNo: "24010101275",
+      },
+      {
+        name: "Chauhan Vishal Girishbhai",
+        rollNo: 262,
+        enrollmentNo: "24010101042",
+      },
+      { name: "Kuchhadiya Vanita Bhima", rollNo: 263, enrollmentNo: "24010101150" },
+      {
+        name: "Bhimani Naman Chiragbhai",
+        rollNo: 264,
+        enrollmentNo: "24010101025",
+      },
+      {
+        name: "Diyora Miraj Bhaveshbhai",
+        rollNo: 265,
+        enrollmentNo: "24010101064",
+      },
+      {
+        name: "Gajera Rakshit Ketanbhai",
+        rollNo: 266,
+        enrollmentNo: "24010101071",
+      },
+      { name: "Parmar Darpan Jitendra", rollNo: 267, enrollmentNo: "24010101205" },
+      {
+        name: "Trivedi Manan Vijaykumar",
+        rollNo: 268,
+        enrollmentNo: "24010101285",
+      },
+      {
+        name: "Dave Maharshi Kirtikumar",
+        rollNo: 269,
+        enrollmentNo: "24010101055",
+      },
+      {
+        name: "Param Rameshbhai Kotadiya",
+        rollNo: 270,
+        enrollmentNo: "24010101148",
+      },
+      { name: "Patel Archi Pradipbhai", rollNo: 271, enrollmentNo: "24010101213" },
+      {
+        name: "Saradhara Yug Vrajbhushanbhai",
+        rollNo: 272,
+        enrollmentNo: "24010101250",
+      },
+      {
+        name: "Padhariya Ruturajsinh Sureshbhai",
+        rollNo: 273,
+        enrollmentNo: "24010101193",
+      },
+      { name: "Vegad Jenil Ashokbhai", rollNo: 274, enrollmentNo: "24010101300" },
+      {
+        name: "Patani Kismatbanu Shahidbhai",
+        rollNo: 275,
+        enrollmentNo: "24010101212",
+      },
+      {
+        name: "Savaliya Jinesh Kantilal",
+        rollNo: 276,
+        enrollmentNo: "24010101254",
+      },
+      { name: "Tank Darshan Chetanbhai", rollNo: 277, enrollmentNo: "24010101277" },
+      { name: "Ghodasara Dev Ketanbhai", rollNo: 278, enrollmentNo: "24010101081" },
+      {
+        name: "Pithadiya Yash Devendrabhai",
+        rollNo: 279,
+        enrollmentNo: "24010101221",
+      },
+      { name: "Gohel Jenil Amitkumar", rollNo: 280, enrollmentNo: "24010101088" },
+    ];
+
+
+    const tableBody = document.getElementById("tableBody");
+
+    function takeAttendance() {
+      tableBody.innerHTML = "";
+      students.forEach((student, index) => {
+        const row = tableBody.insertRow();
+        row.innerHTML = `
+          <td>${student.name}</td>
+          <td>${student.rollNo}</td>
+         <td>
+    <select onchange="updateRowColors()">
+    <option value="Present">Present</option>
+    <option value="Absent">Absent</option>
+  </select>
+</td>
+
+        `;
+      });
+    }
+
+    function updateRowColors() {
+      const rows = tableBody.querySelectorAll("tr");
+      rows.forEach(row => {
+        const select = row.querySelector("select");
+        if (select && select.value === "Absent") {
+          row.classList.add("absent-row");
+        } else {
+          row.classList.remove("absent-row");
+        }
+      });
+    }
+
+
+
+    function allPresent() {
+      const selects = tableBody.querySelectorAll("select");
+      selects.forEach(select => {
+        select.value = "Present";
+      });
+      updateRowColors();
+      document.getElementById("absentList").innerText = "";
+    }
+
+    function allAbsent() {
+      const selects = tableBody.querySelectorAll("select");
+      selects.forEach(select => {
+        select.value = "Absent";
+      });
+      updateRowColors();
+    }
+
+
+    function addAttendance() {
+      const rows = tableBody.querySelectorAll("tr");
+      const absentRolls = [];
+
+      rows.forEach(row => {
+        const rollNo = row.cells[1].textContent;
+        const status = row.querySelector("select").value;
+        if (status === "Absent") {
+          absentRolls.push(rollNo);
+        }
+      });
+
+      const message = absentRolls.length > 0
+        ? "Absent Roll Numbers: " + absentRolls.join(", ")
+        : "All students are present.";
+
+      document.getElementById("absentList").innerText = message;
+    }
+  </script>
+</body>
+
+</html>
