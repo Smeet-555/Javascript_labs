@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="findRide.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <title>CarPool - Find Ride</title>
+</head>
+<body>
+  <!-- Navbar -->
+  <div class="nav">
+    <div class="logo">
+      <i class="fa-solid fa-car-side" id="carimg"></i>
+      <span>CarPool</span>
+    </div>
+    <div class="menu">
+      <ul>
+        <li><a href="carpooling.html">Home</a></li>
+        <li><a href="findRide.html">Find Ride</a></li>
+        <li><a href="offerRide.html">Offer Ride</a></li>
+        <li><a href="#">Profile</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Find Ride Section -->
+  <div class="findRides">
+    <h2>Find <br />Your <br />Rides <br />Here</h2>
+
+    <div class="innerbox">
+      <label for="">FROM:</label><br />
+      <input type="text" placeholder="Enter pickup" />
+    </div>
+    <div class="innerbox">
+      <label for="">TO:</label><br />
+      <input type="text" placeholder="Enter Destination" />
+    </div>
+    <div class="innerbox">
+      <label for="">DATE:</label><br />
+      <input type="date" />
+    </div>
+    <div class="innerbox">
+      <input type="submit" id="searchRide" value="Search Rides" />
+    </div>
+  </div>
+
+  <!-- Ride Container -->
+  <div class="ride-container">
+    <!-- Filter Panel -->
+    <div class="filter">
+      <h3>Filter Rides</h3>
+
+      <label>Price Range</label>
+      <input type="range" min="100" max="1000" step="50" />
+
+      <label>Departure Time</label>
+      <select>
+        <option>Any</option>
+        <option>Morning (6AM - 12PM)</option>
+        <option>Afternoon (12PM - 6PM)</option>
+        <option>Evening (6PM - 10PM)</option>
+      </select>
+
+      <label>Car Type</label>
+      <select>
+        <option>All</option>
+        <option>Sedan</option>
+        <option>SUV</option>
+        <option>Hatchback</option>
+      </select>
+    </div>
+
+    <!-- Ride List -->
+    <div class="ride-list">
+      <div class="ride-card">
+        <div class="ride-info">
+          <p><strong>Driver:</strong> Rahul Sharma</p>
+          <p><strong>Rating:</strong> ⭐ 4.7</p>
+          <p><strong>From:</strong> Mumbai</p>
+          <p><strong>To:</strong> Pune</p>
+          <p><strong>Departure:</strong> 8:00 AM</p>
+          <p><strong>Seats Available:</strong> 2</p>
+        </div>
+        <div class="ride-fare">₹500</div>
+      </div>
+
+      <div class="ride-card">
+        <div class="ride-info">
+          <p><strong>Driver:</strong> Sneha Patel</p>
+          <p><strong>Rating:</strong> ⭐ 4.9</p>
+          <p><strong>From:</strong> Delhi</p>
+          <p><strong>To:</strong> Jaipur</p>
+          <p><strong>Departure:</strong> 1:30 PM</p>
+          <p><strong>Seats Available:</strong> 3</p>
+        </div>
+        <div class="ride-fare">₹650</div>
+      </div>
+
+      <div class="ride-card">
+        <div class="ride-info">
+          <p><strong>Driver:</strong> Karan Mehta</p>
+          <p><strong>Rating:</strong> ⭐ 4.5</p>
+          <p><strong>From:</strong> Bangalore</p>
+          <p><strong>To:</strong> Mysore</p>
+          <p><strong>Departure:</strong> 5:00 PM</p>
+          <p><strong>Seats Available:</strong> 1</p>
+        </div>
+        <div class="ride-fare">₹400</div>
+      </div>
+
+      <div class="ride-card">
+        <div class="ride-info">
+          <p><strong>Driver:</strong> Priya Singh</p>
+          <p><strong>Rating:</strong> ⭐ 4.8</p>
+          <p><strong>From:</strong> Ahmedabad</p>
+          <p><strong>To:</strong> Vadodara</p>
+          <p><strong>Departure:</strong> 9:45 AM</p>
+          <p><strong>Seats Available:</strong> 2</p>
+        </div>
+        <div class="ride-fare">₹350</div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
