@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
 </head>
 <body>
+  <!-- Navbar -->
   <div class="nav">
     <div class="logo">
       <i class="fa-solid fa-car-side" id="carimg"></i>
@@ -24,15 +25,32 @@
     </div>
 
     <div class="btn">
-        <button type="button" class="login">Login</button>
-        <button type="button" class="submit">Submit</button>
+      <button type="button" class="login">Login</button>
+      <button type="button" class="submit">Submit</button>
     </div>
   </div>
+
+  <!-- Offer Ride Form -->
+  <div class="offer-container">
+
+    <!-- Route Info -->
+    <div class="section route-info">
+      <h2>Route Information</h2>
+      <iframe
+        src="https://maps.google.com/maps?q=india&t=&z=5&ie=UTF8&iwloc=&output=embed"
+        width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy">
+      </iframe>
+    </div>
+
     <!-- Date and Time -->
     <div class="section date-time">
       <h2>Date & Time</h2>
-      <label>Departure Date: <input type="date" /></label>
-      <label>Departure Time: <input type="time" /></label>
+      <label>Departure Date:
+        <input type="date" />
+      </label>
+      <label>Departure Time:
+        <input type="time" />
+      </label>
     </div>
 
     <!-- Vehicle Info -->
@@ -41,15 +59,19 @@
       <div class="vehicle-box">
         <img src="your-car-image.jpg" alt="Vehicle Photo"/>
         <div>
-          <label>Car Model: <input type="text" /></label>
-          <label>Car Type: 
+          <label>Car Model:
+            <input type="text" placeholder="e.g. Honda City" />
+          </label>
+          <label>Car Type:
             <select>
               <option>Sedan</option>
               <option>SUV</option>
               <option>Hatchback</option>
             </select>
           </label>
-          <label>Number Plate: <input type="text" /></label>
+          <label>Number Plate:
+            <input type="text" placeholder="e.g. GJ01AB1234" />
+          </label>
         </div>
       </div>
     </div>
@@ -57,21 +79,24 @@
     <!-- Pricing -->
     <div class="section pricing">
       <h2>Pricing</h2>
-      <label>Fare per Seat: ₹<input type="number" /></label>
-      <label>Available Seats: <input type="number" /></label>
+      <label>Fare per Seat: ₹
+        <input type="number" placeholder="e.g. 300" />
+      </label>
+      <label>Available Seats:
+        <input type="number" placeholder="e.g. 3" />
+      </label>
     </div>
 
     <!-- Additional Info -->
     <div class="section additional-info">
       <h2>Additional Information</h2>
-      <textarea rows="5" placeholder="Any additional details..."></textarea>
+      <textarea rows="5" placeholder="Any additional details about the ride, e.g. luggage allowed, COVID precautions, etc."></textarea>
     </div>
 
     <!-- Submit Button -->
     <div class="section submit-section">
       <button type="submit">Post Ride</button>
     </div>
-
   </div>
 </body>
 </html>
