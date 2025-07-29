@@ -1,0 +1,152 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #ade8f4;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 40px;
+  height: 80px;
+  background-color: #023e8a;
+  color: #e9c46a;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+#carimg {
+  margin-right: 10px;
+  font-size: 32px;
+}
+
+.menu ul {
+  display: flex;
+  gap: 30px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu ul li a {
+  text-decoration: none;
+  color: #e9c46a;
+  font-size: 18px;
+  transition: color 0.3s ease, transform 0.2s;
+}
+
+.menu ul li a:hover {
+  color: #ffcb77;
+  transform: scale(1.1);
+}
+
+.btn {
+  display: flex;
+  gap: 15px;
+}
+
+.btn button {
+  padding: 8px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s;
+}
+
+.btn .login {
+  background-color: transparent;
+  border: 2px solid #e9c46a;
+  color: #e9c46a;
+}
+
+.btn .login:hover {
+  background-color: #e9c46a;
+  color: #023e8a;
+}
+
+.btn .submit {
+  background-color: #e9c46a;
+  color: #023e8a;
+  font-weight: bold;
+}
+
+.btn .submit:hover {
+  background-color: #ffcb77;
+  transform: scale(1.05);
+}
+
+
+.offer-container {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.section {
+  margin-bottom: 30px;
+}
+
+.section h2 {
+  color: #023e8a;
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  margin-bottom: 10px;
+  color: #333;
+  font-weight: bold;
+}
+
+input, select, textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 6px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+}
+
+.vehicle-box {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.vehicle-box img {
+  width: 180px;
+  height: 120px;
+  border-radius: 8px;
+  object-fit: cover;
+  border: 2px solid #ccc;
+}
+
+.submit-section {
+  text-align: center;
+}
+
+.submit-section button {
+  padding: 12px 30px;
+  font-size: 18px;
+  background-color: #023e8a;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.submit-section button:hover {
+  background-color: #0077b6;
+}

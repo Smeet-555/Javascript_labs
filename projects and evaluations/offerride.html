@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Offer a Ride</title>
+  <link rel="stylesheet" href="offer-ride.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+</head>
+<body>
+  <div class="nav">
+    <div class="logo">
+      <i class="fa-solid fa-car-side" id="carimg"></i>
+      <span>CarPool</span>
+    </div>
+    <div class="menu">
+      <ul>
+        <li><a href="carpooling.html">Home</a></li>
+        <li><a href="findRide.html">Find Ride</a></li>
+        <li><a href="offerRide.html">Offer Ride</a></li>
+        <li><a href="#">Profile</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </div>
+
+    <div class="btn">
+        <button type="button" class="login">Login</button>
+        <button type="button" class="submit">Submit</button>
+    </div>
+  </div>
+    <!-- Date and Time -->
+    <div class="section date-time">
+      <h2>Date & Time</h2>
+      <label>Departure Date: <input type="date" /></label>
+      <label>Departure Time: <input type="time" /></label>
+    </div>
+
+    <!-- Vehicle Info -->
+    <div class="section vehicle-info">
+      <h2>Vehicle Information</h2>
+      <div class="vehicle-box">
+        <img src="your-car-image.jpg" alt="Vehicle Photo"/>
+        <div>
+          <label>Car Model: <input type="text" /></label>
+          <label>Car Type: 
+            <select>
+              <option>Sedan</option>
+              <option>SUV</option>
+              <option>Hatchback</option>
+            </select>
+          </label>
+          <label>Number Plate: <input type="text" /></label>
+        </div>
+      </div>
+    </div>
+
+    <!-- Pricing -->
+    <div class="section pricing">
+      <h2>Pricing</h2>
+      <label>Fare per Seat: ₹<input type="number" /></label>
+      <label>Available Seats: <input type="number" /></label>
+    </div>
+
+    <!-- Additional Info -->
+    <div class="section additional-info">
+      <h2>Additional Information</h2>
+      <textarea rows="5" placeholder="Any additional details..."></textarea>
+    </div>
+
+    <!-- Submit Button -->
+    <div class="section submit-section">
+      <button type="submit">Post Ride</button>
+    </div>
+
+  </div>
+</body>
+</html>
