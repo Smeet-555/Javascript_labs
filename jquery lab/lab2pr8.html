@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery - Hide Siblings</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    
+    <button id="hideSiblings">Hide All Siblings</button>
+    <button id="showSiblings">Show All Siblings</button>
+    
+    <div>
+        <p>First paragraph</p>
+        <p id="targetElement">This is the target element (will remain visible)</p>
+        <p>Second paragraph</p>
+        <span>This is a span element</span>
+        <div>This is a div element</div>
+        <p>Third paragraph</p>
+        <h3>This is a heading</h3>
+    </div>
+
+    <script>
+        $(document).ready(function() {
+            $('#hideSiblings').click(function() {
+                $('#targetElement').siblings().hide();
+            });
+            
+            $('#showSiblings').click(function() {
+                $('#targetElement').siblings().show();
+            });
+        });
+    </script>
+</body>
+</html>
