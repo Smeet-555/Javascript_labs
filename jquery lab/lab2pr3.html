@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery Content Change</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#changeBtn').click(function() {
+                $('#myHeading').text("Hello World");
+            });
+        });
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1 id="myHeading">Click the button to change this text</h1>
+        <button id="changeBtn">Change to Hello World</button>
+    </div>
+</body>
+</html>

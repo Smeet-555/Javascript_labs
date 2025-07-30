@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery - Get Textbox Content and Set Paragraph</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>jQuery Textbox to Paragraph</h1>
+        
+        <div >
+            <label for="textInput">Enter your text:</label>
+            <input type="text" id="textInput" placeholder="Type something here...">
+        </div>
+        
+        <div >
+            <button id="setContent">Set Paragraph Content</button>
+            <button id="clearContent">Clear Content</button>
+        </div>
+        
+        <div class="output-section">
+            <h3>Output:</h3>
+            <p class="data-paragraph"></p>
+        </div>
+    </div>
+
+    <script>
+        $(document).ready(function() {
+            $('#setContent').click(function() {
+                var textboxContent = $('#textInput').val();
+                $('.data-paragraph').text(textboxContent);
+            });
+            $('#clearContent').click(function() {
+                $('#textInput').val('');
+                $('.data-paragraph').text('');
+            });
+        });
+    </script>
+</body>
+</html>
