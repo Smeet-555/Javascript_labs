@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+      $(document).ready(function() {
+        $('#hideBtn').click(function() {
+          $('#myEle').fadeToggle(); 
+        });
+      });
+    </script>
+    <style>
+        #myEle{
+            height: 300px;
+            width: 300px;
+            background-color: blue;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+<button id="hideBtn">Fade Element</button>
+<div id="myEle">This is the element to Fade.</div>
+</body>
+</html>

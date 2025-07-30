@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery Slide Effects</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#slideUpBtn').click(function() {
+                $('#slideDiv').slideUp(1000);
+            });
+            
+            $('#slideDownBtn').click(function() {
+                $('#slideDiv').slideDown(1000);
+            });
+            
+            $('#slideToggleBtn').click(function() {
+                $('#slideDiv').slideToggle();
+            });
+        });
+    </script>
+    <style>
+        
+        #slideDiv {
+            height: 200px;
+            width: 400px;
+            padding: 20px;
+            background-color: bisque;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="button-container">
+        <button id="slideUpBtn">Slide Up</button>
+        <button id="slideDownBtn">Slide Down</button>
+        <button id="slideToggleBtn">Slide Toggle</button>
+    </div>
+    
+    <div id="slideDiv">
+        <h3>This is a sliding div!</h3>
+        <p>This div demonstrates jQuery slide effects:</p>
+        <ul>
+            <li><strong>Slide Up:</strong> Hides the div with a sliding animation</li>
+            <li><strong>Slide Down:</strong> Shows the div with a sliding animation</li>
+            <li><strong>Slide Toggle:</strong> Toggles between show and hide with sliding</li>
+        </ul>
+    </div>
+</body>
+</html>
