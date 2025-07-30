@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery - Append List Items</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#appendItem').click(function() {
+                $('#myList').append('<li>Hello World</li>');
+            });
+            
+            $('#clearList').click(function() {
+                $('#myList').empty();
+                $('#myList').append('<li>First item</li><li>Second item</li><li>Third item</li>');
+            });
+        });
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>jQuery Append List Items</h1>
+        
+        <div>
+            <button id="appendItem">Add Hello World</button>
+            <button id="clearList">Clear List</button>
+        </div>
+        
+        <div class="list">
+            <h3>Existing List:</h3>
+            <ul id="myList">
+                <li>First item</li>
+                <li>Second item</li>
+                <li>Third item</li>
+            </ul>
+        </div>
+    </div>
+
+</body>
+</html>

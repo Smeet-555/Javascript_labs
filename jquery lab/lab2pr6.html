@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery - Append Table Row</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+    
+        .table{
+            margin-top: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+        th {
+            background-color: #007bff;
+            color: white;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+        
+        <div>
+            <button id="addRow">Add New Row</button>
+            <button id="clearTable">Clear Table</button>
+        </div>
+        
+        <div class="table">
+            <h3>Employee Table:</h3>
+            <table id="employeeTable">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Department</th>
+                        <th>Salary</th>
+                        <th>Email</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Employee A</td>
+                        <td>Engineering</td>
+                        <td>$75,000</td>
+                        <td>john.doe@company.com</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Employee B</td>
+                        <td>Marketing</td>
+                        <td>$65,000</td>
+                        <td>jane.smith@company.com</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Employee C</td>
+                        <td>Sales</td>
+                        <td>$70,000</td>
+                        <td>mike.johnson@company.com</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script>
+        $(document).ready(function() {
+            let rowCounter = 4; 
+            $('#addRow').click(function() {
+                var newRow = '<tr class="new-row">' +
+                    '<td class="counter">' + rowCounter + '</td>' +
+                    '<td>New Employee ' + rowCounter + '</td>' +
+                    '<td>Department ' + rowCounter + '</td>' +
+                    '<td>$' + (60000 + (rowCounter * 1000)) + '</td>' +
+                    '<td>employee' + rowCounter + '@company.com</td>' +
+                    '</tr>';
+                
+                $('#employeeTable tbody').append(newRow);
+                rowCounter++;
+
+                setTimeout(function() {
+                    $('.new-row').removeClass('new-row');
+                }, 2000);
+            });
+            $('#clearTable').click(function() {
+                $('#employeeTable tbody').empty();
+                $('#employeeTable tbody').append(
+                    '<tr>' +
+                        '<td>1</td>' +
+                        '<td>Employee A</td>' +
+                        '<td>Engineering</td>' +
+                        '<td>$75,000</td>' +
+                        '<td>john.doe@company.com</td>' +
+                    '</tr>' +
+                    '<tr>' +
+                        '<td>2</td>' +
+                        '<td>Employee B</td>' +
+                        '<td>Marketing</td>' +
+                        '<td>$65,000</td>' +
+                        '<td>jane.smith@company.com</td>' +
+                    '</tr>' +
+                    '<tr>' +
+                        '<td>3</td>' +
+                        '<td>Employee C</td>' +
+                        '<td>Sales</td>' +
+                        '<td>$70,000</td>' +
+                        '<td>mike.johnson@company.com</td>' +
+                    '</tr>'
+                );
+                rowCounter = 4;
+            });
+        });
+    </script>
+</body>
+</html>
