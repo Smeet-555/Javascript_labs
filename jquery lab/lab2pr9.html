@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery CRUD Operations on Student Array</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <h1>Student CRUD Operations</h1>
+    
+    <div>
+        <h3>Add Student:</h3>
+        <input type="text" id="studentName" placeholder="Student Name">
+        <input type="number" id="rollNo" placeholder="Roll No">
+        <button id="addStudent">Add Student</button>
+    </div>
+    
+    <div>
+        <h3>Update Student:</h3>
+        <input type="number" id="updateRollNo" placeholder="Roll No to update">
+        <input type="text" id="newStudentName" placeholder="New Name">
+        <button id="updateStudent">Update Student</button>
+    </div>
+    
+    <div>
+        <h3>Delete Student:</h3>
+        <input type="number" id="deleteRollNo" placeholder="Roll No to delete">
+        <button id="deleteStudent">Delete Student</button>
+    </div>
+    
+    <div>
+        <h3>Search Student:</h3>
+        <input type="number" id="searchRollNo" placeholder="Roll No to search">
+        <button id="searchStudent">Search Student</button>
+        <div id="searchResult"></div>
+    </div>
+    
+    <div>
+        <h3>All Students:</h3>
+        <button id="displayAll">Display All Students</button>
+        <div id="studentList"></div>
+    </div>
+
+    <script>
+        $(document).ready(function() {
+            let students = [
+                { studentName: "John Doe", rollNo: 101 },
+                { studentName: "Jane Smith", rollNo: 102 },
+                { studentName: "Mike Johnson", rollNo: 103 },
+                { studentName: "Sarah Wilson", rollNo: 104 }
+            ];
+            
+            $('#addStudent').click(function() {
+                let name = $('#studentName').val();
+                let roll = parseInt($('#rollNo').val());
+                
+                if (name && roll) {
+                    let exists = students.find(student => student.rollNo === roll);
+                    if (exists) {
+                        alert('Student with this Roll No already exists!');
+                        return;
+                    }
+                    
+                    students.push({ studentName: name, rollNo: roll });
+                    alert('Student added successfully!');
+                    $('#studentName').val('');
+                    $('#rollNo').val('');
+                } else {
+                    alert('Please enter both name and roll number!');
+                }
+            });
+            
+            $('#displayAll').click(function() {
+                let html = '<ul>';
+                students.forEach(function(student) {
+                    html += '<li>Name: ' + student.studentName + ', Roll No: ' + student.rollNo + '</li>';
+                });
+                html += '</ul>';
+                $('#studentList').html(html);
+            });
+            
+            $('#updateStudent').click(function() {
+                let roll = parseInt($('#updateRollNo').val());
+                let newName = $('#newStudentName').val();
+                
+                if (roll && newName) {
+                    let index = students.findIndex(student => student.rollNo === roll);
+                    if (index !== -1) {
+                        students[index].studentName = newName;
+                        alert('Student updated successfully!');
+                        $('#updateRollNo').val('');
+                        $('#newStudentName').val('');
+                    } else {
+                        alert('Student with this Roll No not found!');
+                    }
+                } else {
+                    alert('Please enter both roll number and new name!');
+                }
+            });
+            
+            $('#deleteStudent').click(function() {
+                let roll = parseInt($('#deleteRollNo').val());
+                
+                if (roll) {
+                    let index = students.findIndex(student => student.rollNo === roll);
+                    if (index !== -1) {
+                        let deletedStudent = students.splice(index, 1)[0];
+                        alert('Student deleted: ' + deletedStudent.studentName + ' (Roll No: ' + deletedStudent.rollNo + ')');
+                        $('#deleteRollNo').val('');
+                    } else {
+                        alert('Student with this Roll No not found!');
+                    }
+                } else {
+                    alert('Please enter roll number!');
+                }
+            });
+            
+            $('#searchStudent').click(function() {
+                let roll = parseInt($('#searchRollNo').val());
+                
+                if (roll) {
+                    let student = students.find(student => student.rollNo === roll);
+                    if (student) {
+                        $('#searchResult').html('<p>Found: Name: ' + student.studentName + ', Roll No: ' + student.rollNo + '</p>');
+                    } else {
+                        $('#searchResult').html('<p>Student with Roll No ' + roll + ' not found!</p>');
+                    }
+                } else {
+                    alert('Please enter roll number!');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
