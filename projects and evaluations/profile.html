@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Driver Profile</title>
+  <link rel="stylesheet" href="profile.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+</head>
+<body>
+  <!-- Navbar -->
+  <div class="nav">
+    <div class="logo">
+      <i class="fa-solid fa-car-side" id="carimg"></i>
+      <span>CarPool</span>
+    </div>
+    <div class="menu">
+      <ul>
+        <li><a href="carpooling.html">Home</a></li>
+        <li><a href="findRide.html">Find Ride</a></li>
+        <li><a href="offerRide.html">Offer Ride</a></li>
+        <li><a href="profile.html">Profile</a></li>
+        <li><a href="contactus.html">Contact</a></li>
+      </ul>
+    </div>
+
+    <div class="btn">
+      <button type="button" class="login">Login</button>
+      <button type="button" class="submit">Submit</button>
+    </div>
+  </div>
+
+  <!-- Profile Header -->
+  <div class="profile-header">
+    <div class="profile-cover">
+      <div class="profile-avatar">
+        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=200&q=80" alt="Driver Avatar"/>
+        <div class="status-badge">
+          <i class="fa-solid fa-check-circle"></i>
+        </div>
+      </div>
+      <div class="profile-info">
+        <h1>Ravi Mehta</h1>
+        <p class="driver-tag">Verified Driver</p>
+        <div class="rating">
+          <div class="stars">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+          </div>
+          <span class="rating-text">4.8 (127 reviews)</span>
+        </div>
+        <div class="stats">
+          <div class="stat-item">
+            <span class="stat-number">156</span>
+            <span class="stat-label">Rides</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number">2,450</span>
+            <span class="stat-label">km</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number">98%</span>
+            <span class="stat-label">On Time</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Content -->
+  <div class="profile-container">
+    <!-- Personal Information -->
+    <div class="section personal-info">
+      <h2><i class="fa-solid fa-user"></i> Personal Information</h2>
+      <div class="info-grid">
+        <div class="info-item">
+          <label>Full Name:</label>
+          <span>Ravi Mehta</span>
+        </div>
+        <div class="info-item">
+          <label>Email:</label>
+          <span>ravi.mehta@email.com</span>
+        </div>
+        <div class="info-item">
+          <label>Phone:</label>
+          <span>+91 98765 43210</span>
+        </div>
+        <div class="info-item">
+          <label>Location:</label>
+          <span>Mumbai, Maharashtra</span>
+        </div>
+        <div class="info-item">
+          <label>Member Since:</label>
+          <span>March 2023</span>
+        </div>
+        <div class="info-item">
+          <label>License Number:</label>
+          <span>MH-01-2023-1234567</span>
+        </div>
+      </div>
+      <div class="action-buttons">
+        <button class="edit-btn">
+          <i class="fa-solid fa-edit"></i>
+          Edit Profile
+        </button>
+        <button class="settings-btn">
+          <i class="fa-solid fa-cog"></i>
+          Settings
+        </button>
+      </div>
+    </div>
+
+    <!-- Vehicle Information -->
+    <div class="section vehicle-info">
+      <h2><i class="fa-solid fa-car"></i> Vehicle Information</h2>
+      <div class="vehicle-details">
+        <div class="vehicle-image">
+          <img src="https://images.unsplash.com/photo-1503736334956-4c8f8e92946d?auto=format&fit=crop&w=400&q=80" alt="Vehicle"/>
+        </div>
+        <div class="vehicle-specs">
+          <div class="spec-item">
+            <label>Car Model:</label>
+            <span>Honda City</span>
+          </div>
+          <div class="spec-item">
+            <label>Car Type:</label>
+            <span>Sedan</span>
+          </div>
+          <div class="spec-item">
+            <label>Number Plate:</label>
+            <span>MH-01-AB-1234</span>
+          </div>
+          <div class="spec-item">
+            <label>Color:</label>
+            <span>White</span>
+          </div>
+          <div class="spec-item">
+            <label>Year:</label>
+            <span>2022</span>
+          </div>
+          <div class="spec-item">
+            <label>Seats:</label>
+            <span>5 (3 available)</span>
+          </div>
+        </div>
+      </div>
+      <div class="amenities-list">
+        <h3>Amenities Available:</h3>
+        <div class="amenities-grid">
+          <span class="amenity-tag"><i class="fa-solid fa-snowflake"></i> AC</span>
+          <span class="amenity-tag"><i class="fa-solid fa-music"></i> Music</span>
+          <span class="amenity-tag"><i class="fa-solid fa-wifi"></i> WiFi</span>
+          <span class="amenity-tag"><i class="fa-solid fa-suitcase"></i> Luggage</span>
+          <span class="amenity-tag"><i class="fa-solid fa-paw"></i> Pet Friendly</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Recent Activity -->
+    <div class="section recent-activity">
+      <h2><i class="fa-solid fa-clock"></i> Recent Activity</h2>
+      <div class="activity-list">
+        <div class="activity-item">
+          <div class="activity-icon">
+            <i class="fa-solid fa-route"></i>
+          </div>
+          <div class="activity-content">
+            <h4>Mumbai → Pune</h4>
+            <p>Completed ride with 3 passengers</p>
+            <span class="activity-time">2 hours ago</span>
+          </div>
+          <div class="activity-earnings">
+            <span class="amount">₹1,200</span>
+          </div>
+        </div>
+        
+        <div class="activity-item">
+          <div class="activity-icon">
+            <i class="fa-solid fa-star"></i>
+          </div>
+          <div class="activity-content">
+            <h4>Received 5-star review</h4>
+            <p>"Great driver, very punctual and safe!"</p>
+            <span class="activity-time">1 day ago</span>
+          </div>
+          <div class="activity-earnings">
+            <span class="rating-badge">5★</span>
+          </div>
+        </div>
+        
+        <div class="activity-item">
+          <div class="activity-icon">
+            <i class="fa-solid fa-route"></i>
+          </div>
+          <div class="activity-content">
+            <h4>Mumbai → Nashik</h4>
+            <p>Completed ride with 2 passengers</p>
+            <span class="activity-time">3 days ago</span>
+          </div>
+          <div class="activity-earnings">
+            <span class="amount">₹800</span>
+          </div>
+        </div>
+        
+        <div class="activity-item">
+          <div class="activity-icon">
+            <i class="fa-solid fa-calendar-check"></i>
+          </div>
+          <div class="activity-content">
+            <h4>New ride posted</h4>
+            <p>Mumbai → Goa for tomorrow</p>
+            <span class="activity-time">5 days ago</span>
+          </div>
+          <div class="activity-earnings">
+            <span class="status-badge">Posted</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Reviews -->
+    <div class="section reviews">
+      <h2><i class="fa-solid fa-comments"></i> Passenger Reviews</h2>
+      <div class="reviews-summary">
+        <div class="overall-rating">
+          <div class="rating-circle">
+            <span class="rating-number">4.8</span>
+            <span class="rating-label">Overall</span>
+          </div>
+        </div>
+        <div class="rating-breakdown">
+          <div class="rating-bar">
+            <span>5★</span>
+            <div class="bar-container">
+              <div class="bar-fill" style="width: 85%"></div>
+            </div>
+            <span>108</span>
+          </div>
+          <div class="rating-bar">
+            <span>4★</span>
+            <div class="bar-container">
+              <div class="bar-fill" style="width: 12%"></div>
+            </div>
+            <span>15</span>
+          </div>
+          <div class="rating-bar">
+            <span>3★</span>
+            <div class="bar-container">
+              <div class="bar-fill" style="width: 2%"></div>
+            </div>
+            <span>3</span>
+          </div>
+          <div class="rating-bar">
+            <span>2★</span>
+            <div class="bar-container">
+              <div class="bar-fill" style="width: 1%"></div>
+            </div>
+            <span>1</span>
+          </div>
+          <div class="rating-bar">
+            <span>1★</span>
+            <div class="bar-container">
+              <div class="bar-fill" style="width: 0%"></div>
+            </div>
+            <span>0</span>
+          </div>
+        </div>
+      </div>
+      
+      <div class="reviews-list">
+        <div class="review-item">
+          <div class="review-header">
+            <div class="reviewer-info">
+              <img src="https://images.unsplash.com/photo-1494790108755-2616b612b786?auto=format&fit=crop&w=50&q=80" alt="Reviewer"/>
+              <div>
+                <h4>Priya Sharma</h4>
+                <div class="stars">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                </div>
+              </div>
+            </div>
+            <span class="review-date">2 days ago</span>
+          </div>
+          <p class="review-text">"Excellent driver! Very punctual and the car was spotless. Great conversation during the journey. Highly recommended!"</p>
+          <div class="review-tags">
+            <span class="tag">Punctual</span>
+            <span class="tag">Clean</span>
+            <span class="tag">Friendly</span>
+          </div>
+        </div>
+        
+        <div class="review-item">
+          <div class="review-header">
+            <div class="reviewer-info">
+              <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=50&q=80" alt="Reviewer"/>
+              <div>
+                <h4>Arjun Patel</h4>
+                <div class="stars">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                </div>
+              </div>
+            </div>
+            <span class="review-date">1 week ago</span>
+          </div>
+          <p class="review-text">"Safe and comfortable ride. Driver was professional and the journey was smooth. Will definitely book again!"</p>
+          <div class="review-tags">
+            <span class="tag">Safe</span>
+            <span class="tag">Professional</span>
+            <span class="tag">Comfortable</span>
+          </div>
+        </div>
+        
+        <div class="review-item">
+          <div class="review-header">
+            <div class="reviewer-info">
+              <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=50&q=80" alt="Reviewer"/>
+              <div>
+                <h4>Meera Iyer</h4>
+                <div class="stars">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-regular fa-star"></i>
+                </div>
+              </div>
+            </div>
+            <span class="review-date">2 weeks ago</span>
+          </div>
+          <p class="review-text">"Good experience overall. Driver was on time and the ride was comfortable. Minor delay due to traffic but understandable."</p>
+          <div class="review-tags">
+            <span class="tag">On Time</span>
+            <span class="tag">Comfortable</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
