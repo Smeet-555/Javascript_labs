@@ -19,8 +19,8 @@
         <li><a href="carpooling.html">Home</a></li>
         <li><a href="findRide.html">Find Ride</a></li>
         <li><a href="offerRide.html">Offer Ride</a></li>
-        <li><a href="#">Profile</a></li>
-        <li><a href="#">Contact</a></li>
+        <li><a href="profile.html">Profile</a></li>
+        <li><a href="contactus.html">Contact</a></li>
       </ul>
     </div>
 
@@ -30,72 +30,182 @@
     </div>
   </div>
 
+  <!-- Header Section -->
+  <div class="header-section">
+    <div class="header-content">
+      <h1>Share Your Journey</h1>
+      <p>Connect with fellow travelers and make commuting affordable and eco-friendly. Post your ride and help others reach their destination.</p>
+    </div>
+  </div>
+
   <!-- Offer Ride Form -->
   <div class="offer-container">
+    <div class="form-header">
+      <h2><i class="fa-solid fa-route"></i> Offer a Ride</h2>
+      <p>Fill in the details below to post your ride</p>
+    </div>
 
     <!-- Route Info -->
     <div class="section route-info">
-      <h2>Route Information</h2>
-      <iframe
-        src="https://maps.google.com/maps?q=india&t=&z=5&ie=UTF8&iwloc=&output=embed"
-        width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy">
-      </iframe>
+      <h3><i class="fa-solid fa-map-location-dot"></i> Route Information</h3>
+      <div class="route-inputs">
+        <div class="input-group">
+          <label>From:</label>
+          <input type="text" placeholder="Enter pickup location" />
+        </div>
+        <div class="input-group">
+          <label>To:</label>
+          <input type="text" placeholder="Enter destination" />
+        </div>
+      </div>
+      <div class="map-container">
+        <iframe
+          src="https://maps.google.com/maps?q=india&t=&z=5&ie=UTF8&iwloc=&output=embed"
+          width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy">
+        </iframe>
+      </div>
     </div>
 
     <!-- Date and Time -->
     <div class="section date-time">
-      <h2>Date & Time</h2>
-      <label>Departure Date:
-        <input type="date" />
-      </label>
-      <label>Departure Time:
-        <input type="time" />
-      </label>
+      <h3><i class="fa-solid fa-calendar-clock"></i> Date & Time</h3>
+      <div class="datetime-inputs">
+        <div class="input-group">
+          <label>Departure Date:</label>
+          <input type="date" />
+        </div>
+        <div class="input-group">
+          <label>Departure Time:</label>
+          <input type="time" />
+        </div>
+      </div>
     </div>
 
     <!-- Vehicle Info -->
     <div class="section vehicle-info">
-      <h2>Vehicle Information</h2>
+      <h3><i class="fa-solid fa-car"></i> Vehicle Information</h3>
       <div class="vehicle-box">
-        <img src="your-car-image.jpg" alt="Vehicle Photo"/>
-        <div>
-          <label>Car Model:
+        <div class="vehicle-image">
+          <img src="https://images.unsplash.com/photo-1503736334956-4c8f8e92946d?auto=format&fit=crop&w=400&q=80" alt="Vehicle Photo"/>
+          <div class="image-overlay">
+            <i class="fa-solid fa-camera"></i>
+            <span>Upload Photo</span>
+          </div>
+        </div>
+        <div class="vehicle-details">
+          <div class="input-group">
+            <label>Car Model:</label>
             <input type="text" placeholder="e.g. Honda City" />
-          </label>
-          <label>Car Type:
+          </div>
+          <div class="input-group">
+            <label>Car Type:</label>
             <select>
-              <option>Sedan</option>
-              <option>SUV</option>
-              <option>Hatchback</option>
+              <option value="">Select car type</option>
+              <option value="sedan">Sedan</option>
+              <option value="suv">SUV</option>
+              <option value="hatchback">Hatchback</option>
+              <option value="luxury">Luxury</option>
             </select>
-          </label>
-          <label>Number Plate:
+          </div>
+          <div class="input-group">
+            <label>Number Plate:</label>
             <input type="text" placeholder="e.g. GJ01AB1234" />
-          </label>
+          </div>
+          <div class="input-group">
+            <label>Vehicle Color:</label>
+            <input type="text" placeholder="e.g. White" />
+          </div>
         </div>
       </div>
     </div>
 
     <!-- Pricing -->
     <div class="section pricing">
-      <h2>Pricing</h2>
-      <label>Fare per Seat: ₹
-        <input type="number" placeholder="e.g. 300" />
-      </label>
-      <label>Available Seats:
-        <input type="number" placeholder="e.g. 3" />
-      </label>
+      <h3><i class="fa-solid fa-indian-rupee-sign"></i> Pricing</h3>
+      <div class="pricing-inputs">
+        <div class="input-group">
+          <label>Fare per Seat (₹):</label>
+          <input type="number" placeholder="e.g. 300" min="0" />
+        </div>
+        <div class="input-group">
+          <label>Available Seats:</label>
+          <input type="number" placeholder="e.g. 3" min="1" max="6" />
+        </div>
+        <div class="input-group">
+          <label>Total Distance (km):</label>
+          <input type="number" placeholder="e.g. 150" min="0" />
+        </div>
+      </div>
     </div>
 
     <!-- Additional Info -->
     <div class="section additional-info">
-      <h2>Additional Information</h2>
-      <textarea rows="5" placeholder="Any additional details about the ride, e.g. luggage allowed, COVID precautions, etc."></textarea>
+      <h3><i class="fa-solid fa-info-circle"></i> Additional Information</h3>
+      <div class="input-group">
+        <label>Ride Description:</label>
+        <textarea rows="5" placeholder="Any additional details about the ride, e.g. luggage allowed, COVID precautions, music preferences, smoking policy, etc."></textarea>
+      </div>
+      <div class="amenities">
+        <h4>Amenities Available:</h4>
+        <div class="amenity-options">
+          <label class="checkbox-label">
+            <input type="checkbox" />
+            <span>AC</span>
+          </label>
+          <label class="checkbox-label">
+            <input type="checkbox" />
+            <span>Music</span>
+          </label>
+          <label class="checkbox-label">
+            <input type="checkbox" />
+            <span>WiFi</span>
+          </label>
+          <label class="checkbox-label">
+            <input type="checkbox" />
+            <span>Luggage Space</span>
+          </label>
+          <label class="checkbox-label">
+            <input type="checkbox" />
+            <span>Pet Friendly</span>
+          </label>
+        </div>
+      </div>
     </div>
 
     <!-- Submit Button -->
     <div class="section submit-section">
-      <button type="submit">Post Ride</button>
+      <button type="submit">
+        <i class="fa-solid fa-paper-plane"></i>
+        Post Ride
+      </button>
+      <p class="submit-note">By posting this ride, you agree to our terms and conditions</p>
+    </div>
+  </div>
+
+  <!-- Benefits Section -->
+  <div class="benefits-section">
+    <h2>Why Offer a Ride?</h2>
+    <div class="benefits-grid">
+      <div class="benefit-card">
+        <i class="fa-solid fa-coins"></i>
+        <h3>Earn Money</h3>
+        <p>Cover your fuel costs and earn extra income</p>
+      </div>
+      <div class="benefit-card">
+        <i class="fa-solid fa-leaf"></i>
+        <h3>Go Green</h3>
+        <p>Reduce carbon footprint and help the environment</p>
+      </div>
+      <div class="benefit-card">
+        <i class="fa-solid fa-users"></i>
+        <h3>Meet People</h3>
+        <p>Connect with interesting travelers and make friends</p>
+      </div>
+      <div class="benefit-card">
+        <i class="fa-solid fa-shield-halved"></i>
+        <h3>Safe Travel</h3>
+        <p>Verified users and secure payment system</p>
+      </div>
     </div>
   </div>
 </body>
