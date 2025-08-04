@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="signinpage.css" />
+  <title>Sign Up - CarPool</title>
+</head>
+<body>
+  <div class="nav">
+    <div class="logo">
+      <i class="fa-solid fa-car-side" id="carimg"></i>
+      <span>CarPool</span>
+    </div>
+    <div class="menu">
+      <ul>
+        <li><a href="carpooling.html">Home</a></li>
+        <li><a href="findRide.html">Find Ride</a></li>
+        <li><a href="offerRide.html">Offer Ride</a></li>
+        <li><a href="profile.html">Profile</a></li>
+        <li><a href="contactus.html">Contact</a></li>
+      </ul>
+    </div>
+
+    <div class="btn">
+        <button type="button" class="login" onclick="window.location.href='loginpage.html'">Login</button>
+        <button type="button" class="submit" onclick="window.location.href='signinpage.html'">Sign up</button>
+    </div>
+  </div>
+
+  <div class="main-container">
+    <div class="signin-container">
+      <div class="signin-card">
+        <div class="signin-header">
+          <i class="fa-solid fa-user-plus"></i>
+          <h1>Create Account</h1>
+          <p>Join CarPool and start your journey</p>
+        </div>
+
+        <form class="signin-form">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="firstName">
+                <i class="fa-solid fa-user"></i>
+                First Name
+              </label>
+              <input type="text" id="firstName" name="firstName" placeholder="Enter first name" required>
+            </div>
+
+            <div class="form-group">
+              <label for="lastName">
+                <i class="fa-solid fa-user"></i>
+                Last Name
+              </label>
+              <input type="text" id="lastName" name="lastName" placeholder="Enter last name" required>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="email">
+              <i class="fa-solid fa-envelope"></i>
+              Email Address
+            </label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+          </div>
+
+          <div class="form-group">
+            <label for="phone">
+              <i class="fa-solid fa-phone"></i>
+              Phone Number
+            </label>
+            <input type="tel" id="phone" name="phone" placeholder="Enter phone number" required>
+          </div>
+
+          <div class="form-group">
+            <label for="password">
+              <i class="fa-solid fa-lock"></i>
+              Password
+            </label>
+            <div class="password-input">
+              <input type="password" id="password" name="password" placeholder="Create a password" required>
+              <i class="fa-solid fa-eye-slash toggle-password"></i>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="confirmPassword">
+              <i class="fa-solid fa-lock"></i>
+              Confirm Password
+            </label>
+            <div class="password-input">
+              <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Confirm your password" required>
+              <i class="fa-solid fa-eye-slash toggle-confirm-password"></i>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="userType">
+              <i class="fa-solid fa-users"></i>
+              Account Type
+            </label>
+            <select id="userType" name="userType" required>
+              <option value="">Select account type</option>
+              <option value="passenger">Passenger</option>
+              <option value="driver">Driver</option>
+              <option value="both">Both</option>
+            </select>
+          </div>
+
+          <div class="form-options">
+            <label class="checkbox-container">
+              <input type="checkbox" id="terms" name="terms" required>
+              <span class="checkmark"></span>
+              I agree to the <a href="#" class="terms-link">Terms & Conditions</a>
+            </label>
+            <label class="checkbox-container">
+              <input type="checkbox" id="newsletter" name="newsletter">
+              <span class="checkmark"></span>
+              Subscribe to newsletter
+            </label>
+          </div>
+
+          <button type="submit" class="signin-btn">
+            <i class="fa-solid fa-user-plus"></i>
+            Create Account
+          </button>
+        </form>
+
+        <div class="divider">
+          <span>or</span>
+        </div>
+
+        <div class="social-signin">
+          <button class="social-btn google">
+            <i class="fa-brands fa-google"></i>
+            Sign up with Google
+          </button>
+          <button class="social-btn facebook">
+            <i class="fa-brands fa-facebook-f"></i>
+            Sign up with Facebook
+          </button>
+        </div>
+
+        <div class="login-link">
+          <p>Already have an account? <a href="loginpage.html">Sign in here</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+</body>
+</html>
