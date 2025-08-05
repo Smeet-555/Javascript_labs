@@ -1,47 +1,38 @@
 body {
   margin: 0;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: linear-gradient(135deg, #0f0f23 0%, #1a1a2e 50%, #16213e 100%);
-  min-height: 100vh;
-  color: #e8e8e8;
+  background: #f9f9f9;
+  color: #222;
 }
 
 .nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 40px;
-  height: 80px;
-  background: rgba(15, 15, 35, 0.95);
-  color: #e8e8e8;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-  border-bottom: 1px solid rgba(0, 255, 255, 0.2);
-  backdrop-filter: blur(20px);
+  padding: 0 24px;
+  height: 64px;
+  background: #fff;
+  color: #222;
+  border-bottom: 1px solid #e0e0e0;
 }
 
 .logo {
   display: flex;
   align-items: center;
-  font-size: 30px;
+  font-size: 22px;
   font-weight: bold;
-  letter-spacing: 1px;
-  color: #00ffff;
+  color: #1976d2;
 }
 
 #carimg {
-  margin-right: 12px;
-  font-size: 36px;
-  color: #00ffff;
-  transition: transform 0.3s ease;
-}
-
-#carimg:hover {
-  transform: scale(1.1);
+  margin-right: 8px;
+  font-size: 26px;
+  color: #1976d2;
 }
 
 .menu ul {
   display: flex;
-  gap: 32px;
+  gap: 18px;
   list-style: none;
   padding: 0;
   margin: 0;
@@ -49,467 +40,252 @@ body {
 
 .menu ul li a {
   text-decoration: none;
-  color: #e8e8e8;
-  font-size: 16px;
+  color: #222;
+  font-size: 15px;
   font-weight: 500;
-  padding: 8px 16px;
-  border-radius: 6px;
-  transition: all 0.3s ease;
-  position: relative;
-}
-
-.menu ul li a::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  width: 0;
-  height: 2px;
-  background: #00ffff;
-  transition: all 0.3s ease;
-  transform: translateX(-50%);
+  padding: 6px 12px;
+  border-radius: 4px;
 }
 
 .menu ul li a:hover {
-  color: #00ffff;
-}
-
-.menu ul li a:hover::after {
-  width: 80%;
+  background: #f0f0f0;
+  color: #1976d2;
 }
 
 .btn {
   display: flex;
-  gap: 15px;
+  gap: 10px;
 }
 
 .btn button {
-  padding: 10px 24px;
+  padding: 7px 18px;
   font-size: 14px;
-  font-weight: 600;
-  border: none;
-  border-radius: 6px;
+  font-weight: 500;
+  border: 1px solid #1976d2;
+  border-radius: 4px;
+  background: #fff;
+  color: #1976d2;
   cursor: pointer;
-  transition: all 0.3s ease;
-  letter-spacing: 0.5px;
-}
-
-.btn .login {
-  background: transparent;
-  border: 1px solid #00ffff;
-  color: #00ffff;
-}
-
-.btn .login:hover {
-  background: rgba(0, 255, 255, 0.1);
-  transform: translateY(-2px);
 }
 
 .btn .submit {
-  background: linear-gradient(135deg, #00ffff 0%, #0096ff 100%);
-  color: #0a0a0a;
-  font-weight: 600;
+  background: #1976d2;
+  color: #fff;
+  border: 1px solid #1976d2;
 }
 
+.btn .login:hover,
 .btn .submit:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 4px 15px rgba(0, 255, 255, 0.3);
+  background: #e3f0fd;
+  color: #1976d2;
 }
 
 .header-section {
-  min-height: 300px;
-  width: 100vw;
-  background: rgba(26, 26, 46, 0.6);
-  backdrop-filter: blur(20px);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 80px 20px;
-  position: relative;
-  overflow: hidden;
-}
-
-.header-section::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: linear-gradient(45deg, transparent 30%, rgba(0, 255, 255, 0.03) 50%, transparent 70%);
-  animation: shimmer 8s ease-in-out infinite;
-}
-
-@keyframes shimmer {
-  0%, 100% { transform: translateX(-100%); }
-  50% { transform: translateX(100%); }
-}
-
-.header-content {
+  background: #fff;
+  border-bottom: 1px solid #e0e0e0;
+  padding: 24px 10px;
   text-align: center;
-  position: relative;
-  z-index: 1;
-  max-width: 800px;
 }
 
 .header-content h1 {
-  color: #ffffff;
-  font-size: 3.5rem;
+  color: #1976d2;
+  font-size: 2rem;
   font-weight: 700;
-  margin-bottom: 20px;
-  text-shadow: 0 0 20px rgba(0, 255, 255, 0.3);
+  margin-bottom: 8px;
 }
 
 .header-content p {
-  color: #b0b0b0;
-  font-size: 1.2rem;
-  line-height: 1.6;
+  color: #444;
+  font-size: 1.1rem;
+  margin: 0 auto;
+  max-width: 600px;
 }
 
 .offer-container {
   max-width: 900px;
-  margin: 48px auto;
-  padding: 40px 32px;
-  background: rgba(26, 26, 46, 0.8);
-  border-radius: 20px;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
-  backdrop-filter: blur(20px);
-  border: 1px solid rgba(0, 255, 255, 0.2);
-}
-
-.form-header {
-  text-align: center;
-  margin-bottom: 40px;
+  margin: 32px auto;
+  background: #fff;
+  border-radius: 10px;
+  border: 1px solid #e0e0e0;
+  padding: 24px 10px;
 }
 
 .form-header h2 {
-  color: #00ffff;
-  font-size: 2.2rem;
-  font-weight: 700;
-  margin-bottom: 10px;
-}
-
-.form-header h2 i {
-  margin-right: 12px;
+  color: #1976d2;
+  font-size: 1.3rem;
+  margin-bottom: 4px;
 }
 
 .form-header p {
-  color: #b0b0b0;
-  font-size: 1.1rem;
+  color: #444;
+  font-size: 1rem;
+  margin-bottom: 16px;
 }
 
 .section {
-  margin-bottom: 36px;
-  border: 1px solid rgba(0, 255, 255, 0.2);
-  border-radius: 16px;
-  padding: 24px;
-  background: rgba(15, 15, 35, 0.6);
-  backdrop-filter: blur(10px);
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
-  transition: all 0.3s ease;
-}
-
-.section:hover {
-  border: 2px solid rgba(0, 255, 255, 0.3);
-  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.3);
+  margin-bottom: 18px;
 }
 
 .section h3 {
-  color: #00ffff;
-  margin-bottom: 20px;
-  font-size: 1.3rem;
-  font-weight: 600;
-  display: flex;
-  align-items: center;
+  color: #1976d2;
+  font-size: 1.1rem;
+  margin-bottom: 8px;
 }
 
-.section h3 i {
-  margin-right: 10px;
-  font-size: 1.2rem;
+.route-inputs, .datetime-inputs, .vehicle-details, .pricing-inputs, .amenity-options {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
 }
 
 .input-group {
-  margin-bottom: 20px;
-}
-
-label {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
   margin-bottom: 8px;
-  color: #e8e8e8;
-  font-weight: 500;
-  font-size: 14px;
-  letter-spacing: 0.5px;
+  min-width: 120px;
+  flex: 1 1 120px;
 }
 
-input, select, textarea {
+.input-group label {
+  color: #1976d2;
+  font-weight: 600;
+  font-size: 13px;
+}
+
+.input-group input,
+.input-group select,
+.input-group textarea {
+  padding: 7px 10px;
+  border: 1px solid #bdbdbd;
+  border-radius: 4px;
+  font-size: 15px;
+  background: #fff;
+  color: #222;
+  resize: none;
+}
+
+.input-group textarea {
+  min-height: 50px;
+}
+
+.map-container iframe {
   width: 100%;
-  max-width: 500px;
-  min-width: 180px;
-  box-sizing: border-box;
-  padding: 14px 16px;
-  margin-top: 6px;
-  border: 1px solid rgba(0, 255, 255, 0.3);
-  border-radius: 8px;
-  font-size: 16px;
-  background: rgba(10, 10, 20, 0.8);
-  color: #e8e8e8;
-  transition: all 0.3s ease;
-  display: block;
-}
-
-input:focus, select:focus, textarea:focus {
-  border: 2px solid #00ffff;
-  outline: none;
-  background: rgba(0, 255, 255, 0.05);
-}
-
-input::placeholder, textarea::placeholder {
-  color: rgba(232, 232, 232, 0.5);
-}
-
-.route-inputs, .datetime-inputs, .pricing-inputs {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 20px;
-  margin-bottom: 20px;
-}
-
-.map-container {
-  border-radius: 12px;
-  overflow: hidden;
-  border: 1px solid rgba(0, 255, 255, 0.2);
+  height: 180px;
+  border-radius: 6px;
+  border: 1px solid #e0e0e0;
 }
 
 .vehicle-box {
   display: flex;
-  gap: 28px;
+  gap: 16px;
   align-items: flex-start;
-  flex-wrap: wrap;
-}
-
-.vehicle-image {
-  position: relative;
-  width: 200px;
-  height: 140px;
-  border-radius: 12px;
-  overflow: hidden;
-  border: 2px solid rgba(0, 255, 255, 0.3);
-  background: rgba(10, 10, 20, 0.8);
-  transition: all 0.3s ease;
-}
-
-.vehicle-image:hover {
-  border-color: #00ffff;
-  transform: scale(1.02);
 }
 
 .vehicle-image img {
-  width: 100%;
-  height: 100%;
+  width: 100px;
+  height: 70px;
   object-fit: cover;
-}
-
-.image-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: rgba(0, 0, 0, 0.7);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  color: #00ffff;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-}
-
-.vehicle-image:hover .image-overlay {
-  opacity: 1;
-}
-
-.image-overlay i {
-  font-size: 24px;
-  margin-bottom: 8px;
+  border-radius: 6px;
+  border: 1px solid #e0e0e0;
 }
 
 .vehicle-details {
   flex: 1;
-  min-width: 250px;
 }
 
-.amenities {
-  margin-top: 20px;
-}
-
-.amenities h4 {
-  color: #00ffff;
-  margin-bottom: 15px;
-  font-size: 1.1rem;
-}
-
-.amenity-options {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 15px;
-}
-
-.checkbox-label {
+.amenity-options label {
   display: flex;
   align-items: center;
-  gap: 8px;
-  color: #e8e8e8;
+  gap: 4px;
   font-size: 14px;
-  cursor: pointer;
-  padding: 8px 12px;
-  border-radius: 6px;
-  background: rgba(0, 255, 255, 0.05);
-  border: 1px solid rgba(0, 255, 255, 0.2);
-  transition: all 0.3s ease;
+  color: #444;
 }
 
-.checkbox-label:hover {
-  background: rgba(0, 255, 255, 0.1);
-  border-color: rgba(0, 255, 255, 0.4);
-}
-
-.checkbox-label input[type="checkbox"] {
-  width: auto;
-  margin: 0;
+.amenity-options input[type="checkbox"] {
+  margin-right: 4px;
 }
 
 .submit-section {
-  text-align: center;
-  padding: 30px 0;
+  text-align: right;
 }
 
 .submit-section button {
-  padding: 16px 40px;
-  font-size: 1.2rem;
-  background: linear-gradient(135deg, #00ffff 0%, #0096ff 100%);
-  color: #0a0a0a;
-  border: none;
-  border-radius: 12px;
+  padding: 7px 18px;
+  font-size: 14px;
+  border-radius: 4px;
+  border: 1px solid #1976d2;
+  background: #1976d2;
+  color: #fff;
   cursor: pointer;
-  font-weight: 600;
-  transition: all 0.3s ease;
-  letter-spacing: 0.5px;
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
 }
 
 .submit-section button:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(0, 255, 255, 0.3);
+  background: #1565c0;
 }
 
 .submit-note {
-  margin-top: 15px;
-  color: #b0b0b0;
-  font-size: 0.9rem;
+  color: #888;
+  font-size: 12px;
+  margin-top: 6px;
 }
 
 .benefits-section {
-  max-width: 1200px;
-  margin: 80px auto;
-  padding: 60px 20px;
-  text-align: center;
+  background: #fff;
+  border-radius: 10px;
+  border: 1px solid #e0e0e0;
+  max-width: 900px;
+  margin: 32px auto;
+  padding: 24px 10px;
 }
 
 .benefits-section h2 {
-  color: #ffffff;
-  font-size: 2.5rem;
-  font-weight: 700;
-  margin-bottom: 50px;
+  color: #1976d2;
+  font-size: 1.3rem;
+  margin-bottom: 16px;
+  text-align: center;
 }
 
 .benefits-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 30px;
-  margin-top: 40px;
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .benefit-card {
-  background: rgba(26, 26, 46, 0.8);
-  backdrop-filter: blur(20px);
-  padding: 30px 20px;
-  border-radius: 16px;
-  border: 1px solid rgba(0, 255, 255, 0.2);
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
-  transition: all 0.4s ease;
-  position: relative;
-  overflow: hidden;
-}
-
-.benefit-card::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(0, 255, 255, 0.05), transparent);
-  transition: left 0.6s ease;
-}
-
-.benefit-card:hover::before {
-  left: 100%;
-}
-
-.benefit-card:hover {
-  border: 2px solid rgba(0, 255, 255, 0.4);
-  transform: translateY(-8px);
-  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
+  background: #f5f5f5;
+  border-radius: 8px;
+  border: 1px solid #e0e0e0;
+  padding: 14px 10px;
+  width: 180px;
+  text-align: center;
 }
 
 .benefit-card i {
-  font-size: 48px;
-  color: #00ffff;
-  margin-bottom: 20px;
-  transition: transform 0.3s ease;
-}
-
-.benefit-card:hover i {
-  transform: scale(1.1);
+  font-size: 28px;
+  color: #1976d2;
+  margin-bottom: 6px;
 }
 
 .benefit-card h3 {
-  color: #ffffff;
-  font-size: 1.4rem;
-  font-weight: 600;
-  margin-bottom: 15px;
+  color: #1976d2;
+  font-size: 1.1rem;
+  margin-bottom: 6px;
 }
 
 .benefit-card p {
-  color: #b0b0b0;
-  font-size: 0.95rem;
-  line-height: 1.5;
+  color: #444;
+  font-size: 0.98rem;
+  margin: 0;
 }
 
-textarea {
-  min-height: 100px;
-  resize: vertical;
-}
-
-@media (max-width: 768px) {
-  .route-inputs, .datetime-inputs, .pricing-inputs {
-    grid-template-columns: 1fr;
+@media (max-width: 900px) {
+  .offer-container, .benefits-section {
+    padding: 10px 2px;
   }
-  
-  .vehicle-box {
+  .vehicle-box, .route-inputs, .datetime-inputs, .vehicle-details, .pricing-inputs, .amenity-options, .benefits-grid {
     flex-direction: column;
-    align-items: center;
-  }
-  
-  .vehicle-image {
-    width: 100%;
-    max-width: 300px;
-  }
-  
-  .benefits-grid {
-    grid-template-columns: 1fr;
+    gap: 8px;
   }
 }
