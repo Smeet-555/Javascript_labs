@@ -1,51 +1,115 @@
+
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home page</title>
-    <link rel="stylesheet" href="homepage.css">
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CoinGecko Clone</title>
+  <link rel="stylesheet" href="homepage.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
-
 <body>
-    <div class="header">
-        <div class="left-head">
-            <div class="left">Coins: 18217</div>
-            <div class="left">Exchanges: 1344</div>
-            <div class="left">Market cap: $4.023T</div>
-            <div class="left">24h Vol: $169.558b</div>
-            <div class="left">Dominance: BTC 57.8% ETH 13.1%</div>
-            <div class="left">GAS: 0.533 GWEI</div>
-        </div>
 
-        <div class="right-head">
-            <div class="logo right"><i class="fa-solid fa-gear"></i></div>
-            <div class="logo right"><i class="fa-solid fa-mobile"></i></div>
-            <div class="login right logo">Login</div>
-            <div class="signup right">Sign up</div>
-        </div>
+  <!-- ===== Top Header ===== -->
+  <div class="header">
+    <div class="left-head">
+      <div class="left">Coins: 18217</div>
+      <div class="left">Exchanges: 1344</div>
+      <div class="left">Market cap: $4.023T</div>
+      <div class="left">24h Vol: $169.558B</div>
+      <div class="left">Dominance: BTC 57.8% ETH 13.1%</div>
+      <div class="left">GAS: 0.533 GWEI</div>
     </div>
-
-    <div class="navbar">
-        <div class="left-nav">
-            <div class="left">Coins: 18217</div>
-            <div class="left">Exchanges: 1344</div>
-            <div class="left">Market cap: $4.023T</div>
-            <div class="left">24h Vol: $169.558b</div>
-            <div class="left">Dominance: BTC 57.8% ETH 13.1%</div>
-            <div class="left">GAS: 0.533 GWEI</div>
-        </div>
-
-         <div class="right-nav">
-            <div class="logo right"><i class="fa-solid fa-gear"></i></div>
-            <div class="logo right"><i class="fa-solid fa-mobile"></i></div>
-            <div class="login right logo">Login</div>
-            <div class="signup right">Sign up</div>
-        </div>
+    <div class="right-head">
+      <div class="logo right"><i class="fa-solid fa-gear"></i></div>
+      <div class="logo right"><i class="fa-solid fa-mobile"></i></div>
+      <div class="login right logo">Login</div>
+      <div class="signup right">Sign up</div>
     </div>
+  </div>
+
+  <!-- ===== Navbar ===== -->
+  <div class="navbar">
+    <div class="left-nav">
+      <div class="left">Cryptocurrencies</div>
+      <div class="left">Exchanges</div>
+      <div class="left">Community</div>
+      <div class="left">Products</div>
+      <div class="left">Learn</div>
+    </div>
+    <div class="right-nav">
+      <input type="text" placeholder="Search Coin..." class="search-bar">
+      <div class="logo right"><i class="fa-solid fa-moon"></i></div>
+    </div>
+  </div>
+
+  <!-- ===== Hero Section ===== -->
+  <section class="hero">
+    <h1>Cryptocurrency Prices by Market Cap</h1>
+    <p>The global crypto market cap is <span class="highlight">$4.02T</span>, a <span class="green">+2.5%</span> increase over the last day.</p>
+  </section>
+
+  <!-- ===== Trending Coins ===== -->
+  <section class="trending">
+    <h2>🔥 Trending Coins</h2>
+    <div class="coin-cards">
+      <div class="coin-card">
+        <img src="https://assets.coingecko.com/coins/images/1/large/bitcoin.png" alt="BTC">
+        <p>Bitcoin (BTC)</p>
+        <span>$67,543</span>
+      </div>
+      <div class="coin-card">
+        <img src="https://assets.coingecko.com/coins/images/279/large/ethereum.png" alt="ETH">
+        <p>Ethereum (ETH)</p>
+        <span>$3,421</span>
+      </div>
+      <div class="coin-card">
+        <img src="https://assets.coingecko.com/coins/images/325/large/Tether-logo.png" alt="USDT">
+        <p>Tether (USDT)</p>
+        <span>$1.00</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Coin List Table ===== -->
+  <section class="coin-table">
+    <h2>Top Cryptocurrencies</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Coin</th>
+          <th>Price</th>
+          <th>24h %</th>
+          <th>Market Cap</th>
+          <th>Volume (24h)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td><img src="https://assets.coingecko.com/coins/images/1/large/bitcoin.png" width="20"> Bitcoin</td>
+          <td>$67,543</td>
+          <td class="green">+3.2%</td>
+          <td>$1.32T</td>
+          <td>$23.4B</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td><img src="https://assets.coingecko.com/coins/images/279/large/ethereum.png" width="20"> Ethereum</td>
+          <td>$3,421</td>
+          <td class="red">-1.1%</td>
+          <td>$412B</td>
+          <td>$14.2B</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- ===== Footer ===== -->
+  <footer class="footer">
+    <p>&copy; 2024 CoinGecko Clone | Built for practice</p>
+  </footer>
+
 </body>
 </html>
