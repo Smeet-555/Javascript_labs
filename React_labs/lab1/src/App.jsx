@@ -5,29 +5,39 @@
 // import './practice programs/practise1.css';
 // import {Header, Hero , Footer, Form } from './practice programs/practise1'
 
-import FacultyList from "./practice programs/lab17/program1";
-import StudentList from "./practice programs/lab17/program2";
-import ProductList from "./practice programs/lab17/program3";
+// import FacultyList from "./practice programs/lab17/program1";
+// import StudentList from "./practice programs/lab17/program2";
+// import ProductList from "./practice programs/lab17/program3";
 
+
+// import Parent  from "./practice programs/lab18/program1";
+import B from "./practice programs/lab18/program2";
 
 
 function App() {
   return (
     
     <>
-
     {/* LAB17 PROGRAM1 */}
-     <div>
+     {/* <div>
       <FacultyList />
-    </div>
+    </div> */}
     {/* LAB17 PROGRAM2 */}
-    <div>
+    {/* <div>
       <StudentList/>
-    </div>
+    </div> */}
     {/* LAB17 PROGRAM3 */}
-    <div>
+    {/* <div>
       <ProductList/>
-    </div>
+    </div> */}
+
+    {/* LAB 18 PROGRAM1 */}
+      {/* <div>
+      <Parent/>
+    </div> */}
+      
+
+      {/* LAB 18 PROGRAM2 */}
     </>
   );
 }
