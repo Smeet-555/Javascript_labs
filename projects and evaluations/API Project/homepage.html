@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,7 +9,6 @@
 </head>
 <body>
 
-  <!-- ===== Top Header ===== -->
   <div class="header">
     <div class="left-head">
       <div class="left">Coins: 18217</div>
@@ -28,9 +26,11 @@
     </div>
   </div>
 
-  <!-- ===== Navbar ===== -->
   <div class="navbar">
     <div class="left-nav">
+      <div class="logo-section">
+        <img src="./logo.png" alt="CoinGecko" class="main-logo">
+      </div>
       <div class="left">Cryptocurrencies</div>
       <div class="left">Exchanges</div>
       <div class="left">Community</div>
@@ -43,35 +43,48 @@
     </div>
   </div>
 
-  <!-- ===== Hero Section ===== -->
   <section class="hero">
     <h1>Cryptocurrency Prices by Market Cap</h1>
     <p>The global crypto market cap is <span class="highlight">$4.02T</span>, a <span class="green">+2.5%</span> increase over the last day.</p>
   </section>
 
-  <!-- ===== Trending Coins ===== -->
   <section class="trending">
     <h2>🔥 Trending Coins</h2>
     <div class="coin-cards">
       <div class="coin-card">
-        <img src="https://assets.coingecko.com/coins/images/1/large/bitcoin.png" alt="BTC">
+        <img src="./Bitcoin.png" alt="BTC">
         <p>Bitcoin (BTC)</p>
-        <span>$67,543</span>
+        <span class="price">$67,543</span>
+        <span class="change green">+3.2%</span>
       </div>
       <div class="coin-card">
-        <img src="https://assets.coingecko.com/coins/images/279/large/ethereum.png" alt="ETH">
+        <img src="./etherium.png" alt="ETH">
         <p>Ethereum (ETH)</p>
-        <span>$3,421</span>
+        <span class="price">$3,421</span>
+        <span class="change red">-1.1%</span>
       </div>
       <div class="coin-card">
-        <img src="https://assets.coingecko.com/coins/images/325/large/Tether-logo.png" alt="USDT">
+        <img src="./USDT.png" alt="USDT">
         <p>Tether (USDT)</p>
-        <span>$1.00</span>
+        <span class="price">$1.00</span>
+        <span class="change green">+0.1%</span>
+      </div>
+      <div class="coin-card">
+        <img src="./solana.png" alt="SOL">
+        <p>Solana (SOL)</p>
+        <span class="price">$156.23</span>
+        <span class="change green">+5.7%</span>
+      </div>
+      <div class="coin-card">
+        <img src="./Bitcoin.png" alt="BNB">
+        <p>BNB (BNB)</p>
+        <span class="price">$612.45</span>
+        <span class="change red">-2.3%</span>
       </div>
     </div>
   </section>
 
-  <!-- ===== Coin List Table ===== -->
+
   <section class="coin-table">
     <h2>Top Cryptocurrencies</h2>
     <table>
@@ -83,30 +96,74 @@
           <th>24h %</th>
           <th>Market Cap</th>
           <th>Volume (24h)</th>
+          <th>Circulating Supply</th>
         </tr>
       </thead>
       <tbody>
         <tr>
           <td>1</td>
-          <td><img src="https://assets.coingecko.com/coins/images/1/large/bitcoin.png" width="20"> Bitcoin</td>
-          <td>$67,543</td>
+          <td class="coin-info">
+            <img src="./Bitcoin.png" alt="BTC">
+            <span class="coin-name">Bitcoin <small>BTC</small></span>
+          </td>
+          <td class="price">$67,543</td>
           <td class="green">+3.2%</td>
           <td>$1.32T</td>
           <td>$23.4B</td>
+          <td>19.8M BTC</td>
         </tr>
         <tr>
           <td>2</td>
-          <td><img src="https://assets.coingecko.com/coins/images/279/large/ethereum.png" width="20"> Ethereum</td>
-          <td>$3,421</td>
+          <td class="coin-info">
+            <img src="./etherium.png" alt="ETH">
+            <span class="coin-name">Ethereum <small>ETH</small></span>
+          </td>
+          <td class="price">$3,421</td>
           <td class="red">-1.1%</td>
           <td>$412B</td>
           <td>$14.2B</td>
+          <td>120.4M ETH</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td class="coin-info">
+            <img src="./USDT.png" alt="USDT">
+            <span class="coin-name">Tether <small>USDT</small></span>
+          </td>
+          <td class="price">$1.00</td>
+          <td class="green">+0.1%</td>
+          <td>$118B</td>
+          <td>$45.2B</td>
+          <td>118.1B USDT</td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td class="coin-info">
+            <img src="./solana.png" alt="SOL">
+            <span class="coin-name">Solana <small>SOL</small></span>
+          </td>
+          <td class="price">$156.23</td>
+          <td class="green">+5.7%</td>
+          <td>$73.2B</td>
+          <td>$2.8B</td>
+          <td>468.5M SOL</td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td class="coin-info">
+            <img src="./extra.png" alt="BNB">
+            <span class="coin-name">BNB <small>BNB</small></span>
+          </td>
+          <td class="price">$612.45</td>
+          <td class="red">-2.3%</td>
+          <td>$89.1B</td>
+          <td>$1.9B</td>
+          <td>145.5M BNB</td>
         </tr>
       </tbody>
     </table>
   </section>
 
-  <!-- ===== Footer ===== -->
   <footer class="footer">
     <p>&copy; 2024 CoinGecko Clone | Built for practice</p>
   </footer>
