@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cryptocurrency by Market Cap</title>
+  <link rel="stylesheet" href="market-cap.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+</head>
+<body> 
+  <header class="header">
+    <div class="container">
+      <a class="mc-logo" href="homepage.html" aria-label="Go to homepage">
+        <div class="logo-section">
+          <img src="./logo.png" alt="CoinGecko" class="main-logo">
+        </div>
+        <span class="logoText">CoinGeck</span>
+      </a>
+
+      <nav class="mc-nav" aria-label="Main">
+        <ul class="navList">
+          <li class="navItem">
+            <a href="homepage.html" class="navLink">
+              Home
+            </a>
+          </li>
+          <li class="navItem">
+            <a href="market-cap.html" class="navLink" aria-current="page">
+              Cryptocurrencies
+            </a>
+          </li>
+          <li class="navItem">
+            <a href="categories.html" class="navLink">
+              Categories
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="container xabc">
+      <nav class="mc-breadcrumb" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="index.html">Home</a></li>
+          <li aria-current="page">Cryptocurrency by Market Cap</li>
+        </ol>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="mc-hero">
+      <div class="container">
+        <h1>Cryptocurrency by Market Cap</h1>
+        <p>Ranking of the top cryptocurrencies by total market capitalization. Data shown is demo content.</p>
+      </div>
+    </section>
+    <section class="toolbar">
+      <div class="container">
+        <div class="toolRow">
+          <div class="chips">
+            <span class="chip active">All</span>
+            <span class="chip">Layer 1</span>
+            <span class="chip">DeFi</span>
+            <span class="chip">NFT</span>
+          </div>
+          <div class="stats">
+            <span>Market Cap: <strong>$4.02T</strong></span>
+            <span class="dot" ></span>
+            <span>24h Vol: <strong>$169.6B</strong></span>
+            <span class="dot" ></span>
+            <span>BTC Dom: <strong>57.8%</strong></span>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="tableSec">
+      <div class="container">
+        <div class="tWrap" >
+          <table class="table">
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>Coin</th>
+                <th>Price</th>
+                <th>1h</th>
+                <th>24h</th>
+                <th>7d</th>
+                <th>Market Cap</th>
+                <th>24h Volume</th>
+                <th>Circulating Supply</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>
+                  <div class="coin">
+                    <img src="./Bitcoin.png" alt="Bitcoin logo"/>
+                  </div>
+                </td>
+                <td>$67,543.00</td>
+                <td class="up">+0.12%</td>
+                <td class="up">+3.2%</td>
+                <td class="up">+6.1%</td>
+                <td>$1,329,000,000,000</td>
+                <td>$23,400,000,000</td>
+                <td>19,800,000 BTC</td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>
+                  <div class="coin">
+                    <img src="./etherium.png" alt="Ethereum logo"/>
+                  </div>
+                </td>
+                <td>$3,421.00</td>
+                <td class="down">-0.21%</td>
+                <td class="down">-1.1%</td>
+                <td class="up">+4.3%</td>
+                <td>$412,000,000,000</td>
+                <td>$14,200,000,000</td>
+                <td>120,400,000 ETH</td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>
+                  <div class="coin">
+                    <img src="./solana.png" alt="Solana logo"/>
+                  </div>
+                </td>
+                <td>$156.23</td>
+                <td class="up">+0.03%</td>
+                <td class="up">+5.7%</td>
+                <td class="up">+9.2%</td>
+                <td>$73,200,000,000</td>
+                <td>$2,800,000,000</td>
+                <td>468,500,000 SOL</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>© 2025 CoinGecko Clone — Demo page for “Cryptocurrency by Market Cap”.</p>
+      <a href="homepage.html" class="back"><i class="fa-solid fa-arrow-left-long"></i> Back to Home</a>
+    </div>
+  </footer>
+</body>
+</html>
