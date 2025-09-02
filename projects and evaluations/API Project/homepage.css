@@ -1,3 +1,4 @@
+/* Added base styles and improved typography */
 * {
   margin: 0;
   padding: 0;
@@ -31,6 +32,16 @@ body {
   color: #666;
   font-weight: 500;
 }
+
+.left-nav a.left {
+  text-decoration: none;
+  color: inherit;
+  display: inline-block;
+}
+.left-nav a.left:hover {
+  opacity: 0.85;
+}
+
 
 .right-head {
   display: flex;
@@ -140,6 +151,100 @@ body {
   justify-content: center;
   align-items: center;
   gap: 15px;
+}
+
+
+.nav-item {
+  position: relative;
+  padding: 0 15px;
+  font-weight: 500;
+}
+
+.nav-item .nav-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: #333;
+  text-decoration: none;
+  height: 55px;
+}
+
+.nav-item .nav-link:hover {
+  color: #10ca10;
+}
+
+.dropd:focus-within .dropdown,
+.dropd:hover .dropdown {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.dropdown {
+  position: absolute;
+  top: 100%;
+  left: 10px;
+  min-width: 260px;
+  background: #fff;
+  border: 1px solid #e9ecef;
+  border-radius: 10px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  padding: 8px;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(6px);
+  transition: all 0.18s ease;
+  z-index: 1000;
+  pointer-events: none;
+}
+
+.dropdown-item {
+  display: block;
+  padding: 10px 12px;
+  border-radius: 8px;
+  color: #2c3e50;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.dropdown-item:hover,
+.dropdown-item:focus {
+  background: #f8f9fa;
+  color: #10ca10;
+  outline: none;
+}
+
+
+.nav-item {
+  position: relative;
+}
+
+.nav-item .dropdown {
+  position: absolute;
+  top: 100%; 
+  left: 0;
+  background: white;
+  min-width: 200px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  box-shadow: 0px 4px 8px rgba(0,0,0,0.1);
+  z-index: 1000;
+}
+
+.nav-item .dropdown a {
+  display: block;
+  padding: 10px 15px;
+  color: black;
+  text-decoration: none;
+}
+
+.nav-item .dropdown a:hover {
+  background: #f3f3f3;
+}
+
+.nav-item:hover .dropdown {
+  display: block;
 }
 
 .search-bar {
@@ -309,7 +414,6 @@ body {
   color: #2c3e50;
 }
 
-/* Footer */
 .footer {
   text-align: center;
   padding: 30px 20px;
@@ -319,7 +423,6 @@ body {
   border-top: 1px solid #ddd;
 }
 
-/* Added responsive design */
 @media (max-width: 768px) {
   .header {
     flex-direction: column;
@@ -355,5 +458,16 @@ body {
 
   .search-bar {
     width: 200px;
+  }
+
+  .dropdown {
+    position: static;
+    transform: none;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    box-shadow: none;
+    border: 1px solid #e9ecef;
+    margin-top: 8px;
   }
 }
