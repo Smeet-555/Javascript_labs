@@ -12,15 +12,18 @@
 
 // import Parent  from "./practice programs/lab18/program1";
 // import B from "./practice programs/lab18/program2";
-import Home from "./practice programs/lab19/home";
-import { Header, Footer } from "./practice programs/lab19/header";
-import  Page1  from "./practice programs/lab19/page1"
-import  Page2  from "./practice programs/lab19/page2"
 
 
+// import Home from "./practice programs/lab19/home";
+// import { Header, Footer } from "./practice programs/lab19/header";
+// import  Page1  from "./practice programs/lab19/page1"
+// import  Page2  from "./practice programs/lab19/page2"
 
 
-import { BrowserRouter, Routes, Route, Outlet } from "react-router-dom";
+// import UseState from "./practice programs/lab20/useState";
+import UseEffect from "./practice programs/lab20/useEffect";
+
+// import { BrowserRouter, Routes, Route, Outlet } from "react-router-dom";
 
 function Layout() {
   return (
@@ -55,7 +58,7 @@ function App() {
       
 
       {/* LAB 19 */}
-    <BrowserRouter>
+    {/* <BrowserRouter>
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
@@ -63,7 +66,12 @@ function App() {
           <Route path="page2" element={<Page2 />} />
         </Route>
       </Routes>
-    </BrowserRouter>
+    </BrowserRouter> */}
+
+        {/* LAB 20 */}
+          {/* <UseState/> */}
+             <UseEffect/>
+         
     </>
   );
 }
