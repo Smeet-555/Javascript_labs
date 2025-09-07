@@ -26,24 +26,73 @@
     </div>
   </div>
 
-  <div class="navbar">
-    <div class="left-nav">
+<div class="navbar">
+      <div class="left-nav">
+        <div class="logo-section">
+          <img src="./logo.png" alt="CoinGecko" class="main-logo">
+        </div>
 
-      <div class="logo-section">
-        <img src="./logo.png" alt="CoinGecko" class="main-logo">
-      </div>
-      <a href="./market-cap.html" class="left">Cryptocurrencies</a>
-      <a href="categories.html" class="left">Categories</a>
-      <a href="./exchange.html" class="left">Exchanges</a>
-      <!-- <a href="#" class="left">Community</a> -->
-      <!-- <a href="#" class="left">Products</a> -->
-      <!-- <a href="#" class="left">Learn</a> -->
-    </div>
-    <div class="right-nav">
-      <input type="text" placeholder="Search Coin..." class="search-bar">
-      <div class="logo right"><i class="fa-solid fa-moon"></i></div>
-    </div>
+        <div class="nav-item dropd">
+          <a href="#" class="nav-link left" >
+            Cryptocurrencies <i class="fa-solid fa-caret-down"></i>
+          </a>
+          <div class="dropdown" role="menu" aria-label="Cryptocurrencies submenu">
+            <a class="dropdown-item" href="./market-cap.html">By market cap</a>
+        <a href="categories.html" class="dropdown__link dropdown-item">Categories</a>
+          </div>
+        </div>
+
+        <!-- <a href="./exchange.html" class="left">Exchanges</a> -->
+
+<li class="navItem navItem--dropdown">
+  <a href="#" class="navLink navLink--crypto left" aria-haspopup="true" aria-expanded="false">
+    Cryptocurrencies <i class="fa-solid fa-caret-down" aria-hidden="true"></i>
+  </a>
+  <div class="dropdown" role="menu" aria-label="Cryptocurrencies submenu">
+    <a href="by-market-cap.html" class="dropdown__link dropdown-item">By market cap</a>
+    <a href="categories.html" class="dropdown__link dropdown-item">Categories</a>
   </div>
+</li>
+
+<li class="navItem navItem--dropdown dropd">
+  <a href="#" class="navLink navLink--exchanges left" aria-haspopup="true" aria-expanded="false">
+    Exchanges <i class="fa-solid fa-caret-down" aria-hidden="true"></i>
+  </a>
+  <div class="dropdown" role="menu" aria-label="Exchanges submenu">
+    <a href="crypto-exchanges.html" class="dropdown__link dropdown-item">Crypto Exchanges</a>
+    <a href="decentralized-exchanges.html" class="dropdown__link dropdown-item">Decentralized Exchanges</a>
+  </div>
+</li>
+
+<!-- Added NFT dropdown with two submenu items -->
+<li class="navItem navItem--dropdown dropd">
+  <a href="#" class="navLink navLink--nft left" aria-haspopup="true" aria-expanded="false">
+    NFT <i class="fa-solid fa-caret-down" aria-hidden="true"></i>
+  </a>
+  <div class="dropdown" role="menu" aria-label="NFT submenu">
+    <a href="nft-floor-price.html" class="dropdown__link dropdown-item">NFT Floor Price</a>
+    <a href="nft-related-coins.html" class="dropdown__link dropdown-item">NFT Related Coins</a>
+  </div>
+</li>
+
+<!-- Added Learn dropdown with two submenu items -->
+<li class="navItem navItem--dropdown dropd">
+  <a href="#" class="navLink navLink--learn left" aria-haspopup="true" aria-expanded="false">
+    Learn <i class="fa-solid fa-caret-down" aria-hidden="true"></i>
+  </a>
+  <div class="dropdown" role="menu" aria-label="Learn submenu">
+    <a href="learn-crypto.html" class="dropdown__link dropdown-item">Learn Crypto</a>
+    <a href="research-insights.html" class="dropdown__link dropdown-item">Research Insights</a>
+  </div>
+</li>
+
+      </div>
+      <div class="right-nav">
+        <input type="text" placeholder="Search Coin..." class="search-bar">
+        <div class="logo right"><i class="fa-solid fa-moon"></i></div>
+      </div>
+    </div>
+
 
 
   <section class="hero">
@@ -88,22 +137,20 @@
     </div>
   </section>
 
-
-  <section class="coin-table">
-    <h2>Top Cryptocurrencies</h2>
-    <table>
-      <thead>
-        <tr>
-          <th>#</th>
-          <th>Coin</th>
-          <th>Price</th>
-          <th>24h %</th>
-          <th>Market Cap</th>
-          <th>Volume (24h)</th>
-          <th>Circulating Supply</th>
-        </tr>
-      </thead>
-      <tbody>
+<section class="coin-table">
+  <table>
+    <thead>
+      <tr>
+        <th>Price</th>
+        <th>1h</th>
+        <th>24h</th>
+        <th>7d</th>
+        <th>24h Volume</th>
+        <th>Market Cap</th>
+        <th>7d Trend</th>
+      </tr>
+    </thead>
+    <tbody>
         <tr>
           <td>1</td>
           <td class="coin-info">

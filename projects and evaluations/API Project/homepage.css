@@ -42,7 +42,6 @@ body {
   opacity: 0.85;
 }
 
-
 .right-head {
   display: flex;
 }
@@ -119,6 +118,8 @@ body {
   align-items: center;
   padding: 0 20px;
   background-color: #fff;
+  position: relative;
+  z-index: 5;
 }
 
 .logo-section {
@@ -153,56 +154,56 @@ body {
   gap: 15px;
 }
 
-
 .nav-item {
   position: relative;
-  padding: 0 15px;
-  font-weight: 500;
+  padding: 0 10px;
 }
 
-.nav-item .nav-link {
+.nav-link {
   display: inline-flex;
   align-items: center;
   gap: 6px;
+  height: 55px;
   color: #333;
   text-decoration: none;
-  height: 55px;
 }
 
-.nav-item .nav-link:hover {
+.nav-link:hover {
   color: #10ca10;
 }
 
-.dropd:focus-within .dropdown,
-.dropd:hover .dropdown {
-  opacity: 1;
-  visibility: visible;
-  transform: translateY(0);
-  pointer-events: auto;
-}
-
+/* submenu panel */
+/* General dropdown positioning */
 .dropdown {
+  margin-top: 0;            /* remove extra offset */
   position: absolute;
   top: 100%;
-  left: 10px;
-  min-width: 260px;
+  left: 0;                  /* align with parent */
+  min-width: 200px;
   background: #fff;
   border: 1px solid #e9ecef;
-  border-radius: 10px;
+  border-radius: 8px;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
   padding: 8px;
-  opacity: 0;
-  visibility: hidden;
-  transform: translateY(6px);
-  transition: all 0.18s ease;
+  display: none; 
   z-index: 1000;
-  pointer-events: none;
+}
+
+/* Ensure each parent acts as anchor */
+.dropd {
+  position: relative;
+}
+
+/* reveal on hover/focus-within (pure CSS) */
+.dropd:hover .dropdown,
+.dropd:focus-within .dropdown {
+  display: block;
 }
 
 .dropdown-item {
   display: block;
   padding: 10px 12px;
-  border-radius: 8px;
+  border-radius: 6px;
   color: #2c3e50;
   text-decoration: none;
   font-size: 14px;
@@ -213,38 +214,6 @@ body {
   background: #f8f9fa;
   color: #10ca10;
   outline: none;
-}
-
-
-.nav-item {
-  position: relative;
-}
-
-.nav-item .dropdown {
-  position: absolute;
-  top: 100%; 
-  left: 0;
-  background: white;
-  min-width: 200px;
-  border: 1px solid #ddd;
-  border-radius: 6px;
-  box-shadow: 0px 4px 8px rgba(0,0,0,0.1);
-  z-index: 1000;
-}
-
-.nav-item .dropdown a {
-  display: block;
-  padding: 10px 15px;
-  color: black;
-  text-decoration: none;
-}
-
-.nav-item .dropdown a:hover {
-  background: #f3f3f3;
-}
-
-.nav-item:hover .dropdown {
-  display: block;
 }
 
 .search-bar {
@@ -423,6 +392,13 @@ body {
   border-top: 1px solid #ddd;
 }
 
+.left-nav .nav-item.dropd > .nav-link,
+.left-nav .nav-link--crypto {
+  margin-top: 0;       
+  height: 55px;       
+  display: flex;
+  align-items: center; 
+}
 @media (max-width: 768px) {
   .header {
     flex-direction: column;
@@ -462,10 +438,7 @@ body {
 
   .dropdown {
     position: static;
-    transform: none;
-    opacity: 1;
-    visibility: visible;
-    pointer-events: auto;
+    display: block;
     box-shadow: none;
     border: 1px solid #e9ecef;
     margin-top: 8px;
