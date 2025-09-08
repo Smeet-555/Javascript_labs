@@ -6,42 +6,89 @@
   <title>Cryptocurrency by Market Cap</title>
   <link rel="stylesheet" href="market-cap.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body> 
   <header class="header">
     <div class="container">
-      <a class="mc-logo" href="homepage.html" aria-label="Go to homepage">
-        <div class="logo-section">
-          <img src="./logo.png" alt="CoinGecko" class="main-logo">
+      <div class="top-row">
+        <div class="stats-top">
+          <span>Coins: <strong>16,849</strong></span>
+          <span class="dot"></span>
+          <span>Exchanges: <strong>1,366</strong></span>
+          <span class="dot"></span>
+          <span>Market Cap: <strong>$3.98T</strong> <span class="up">▲ 1.1%</span></span>
+          <span class="dot"></span>
+          <span>24h Vol: <strong>$108.38B</strong></span>
+          <span class="dot"></span>
+          <span>Dominance: <strong>BTC 56.3%</strong> <span class="dot"></span> <strong>ETH 13.1%</strong></span>
+          <span class="dot"></span>
+          <span><img src="https://placehold.co/16x16/ffffff/000000?text=G" alt="Gas logo" class="inline-logo"> Gas: <strong>1,462 GWEI</strong></span>
         </div>
-        <span class="logoText">CoinGeck</span>
-      </a>
+        <div class="user-actions">
+          <button class="icon-btn"><i class="fa-solid fa-bell"></i></button>
+          <a href="#" class="icon-btn"><i class="fa-solid fa-right-to-bracket"></i></a>
+          <button class="sign-up-btn">Sign up</button>
+        </div>
+      </div>
+      <div class="main-header-row">
+        <a class="mc-logo" href="homepage.html" aria-label="Go to homepage">
+          <div class="logo-section">
+            <img src="./logo.png" alt="CoinGecko" class="main-logo">
+          </div>
+          <span class="logoText">coingecko</span>
+        </a>
 
-      <nav class="mc-nav" aria-label="Main">
-        <ul class="navList">
-          <li class="navItem">
-            <a href="homepage.html" class="navLink">
-              Home
-            </a>
-          </li>
-          <li class="navItem">
-            <a href="market-cap.html" class="navLink" aria-current="page">
-              Cryptocurrencies
-            </a>
-          </li>
-          <li class="navItem">
-            <a href="categories.html" class="navLink">
-              Categories
-            </a>
-          </li>
-        </ul>
-      </nav>
-    </div>
-
-    <div class="container xabc">
+        <nav class="mc-nav" aria-label="Main">
+          <ul class="navList">
+            <li class="navItem navItem--dropdown dropd">
+              <a href="market-cap.html" class="navLink navLink--crypto" aria-current="page">
+                Cryptocurrencies <i class="fa-solid fa-caret-down"></i>
+              </a>
+              <div class="dropdown" role="menu">
+                <a href="market-cap.html" class="dropdown__link dropdown-item">By Market Cap</a>
+                <a href="categories.html" class="dropdown__link dropdown-item">Categories</a>
+              </div>
+            </li>
+            <li class="navItem navItem--dropdown dropd">
+              <a href="#" class="navLink navLink--exchanges">
+                Exchanges <i class="fa-solid fa-caret-down"></i>
+              </a>
+              <div class="dropdown" role="menu">
+                <a href="crypto-exchanges.html" class="dropdown__link dropdown-item">Crypto Exchanges</a>
+                <a href="decentralized-exchanges.html" class="dropdown__link dropdown-item">Decentralized Exchanges</a>
+              </div>
+            </li>
+            <li class="navItem navItem--dropdown dropd">
+              <a href="nft.html" class="navLink navLink--nft">
+                NFT <i class="fa-solid fa-caret-down"></i>
+              </a>
+              <div class="dropdown" role="menu">
+                <a href="nft-floor-price.html" class="dropdown__link dropdown-item">NFT Floor Price</a>
+                <a href="nft-related-coins.html" class="dropdown__link dropdown-item">NFT Related Coins</a>
+              </div>
+            </li>
+            <li class="navItem navItem--dropdown dropd">
+              <a href="learn.html" class="navLink navLink--learn">
+                Learn <i class="fa-solid fa-caret-down"></i>
+              </a>
+              <div class="dropdown" role="menu">
+                <a href="learn-crypto.html" class="dropdown__link dropdown-item">Learn Crypto</a>
+                <a href="research-insights.html" class="dropdown__link dropdown-item">Research Insights</a>
+              </div>
+            </li>
+          </ul>
+        </nav>
+        <div class="header-right">
+          <div class="search-box">
+            <i class="fa-solid fa-search search-icon"></i>
+            <input type="text" placeholder="Search" class="search-input">
+          </div>
+        </div>
+      </div>
       <nav class="mc-breadcrumb" aria-label="Breadcrumb">
         <ol>
-          <li><a href="index.html">Home</a></li>
+          <li><a href="homepage.html">Home</a></li>
           <li aria-current="page">Cryptocurrency by Market Cap</li>
         </ol>
       </nav>
@@ -51,25 +98,87 @@
   <main>
     <section class="mc-hero">
       <div class="container">
-        <h1>Cryptocurrency by Market Cap</h1>
-        <p>Ranking of the top cryptocurrencies by total market capitalization. Data shown is demo content.</p>
+        <div class="mc-title-row">
+          <h1>Cryptocurrency Prices by Market Cap</h1>
+          <div class="highlights">
+            <span>Highlights</span>
+            <i class="fa-solid fa-toggle-on"></i>
+          </div>
+        </div>
+        <p>The global cryptocurrency market cap today is <strong class="mc-value">$3.98 Trillion</strong>, a <span class="up">▲ 1.1%</span> change in the last 24 hours. <a href="#">Read more</a></p>
+        <div class="stats-cards-row">
+          <div class="card">
+            <div class="card-header">
+              <h3>$3,968,220,888,737</h3>
+              <p>Market Cap <span class="up">1.1%</span></p>
+            </div>
+            <div class="card-chart">
+              <i class="fa-solid fa-chart-line up-chart"></i>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header">
+              <h3>$108,367,774,311</h3>
+              <p>24h Trading Volume</p>
+            </div>
+            <div class="card-chart">
+              <i class="fa-solid fa-chart-line up-chart"></i>
+            </div>
+          </div>
+          <div class="card trending-card">
+            <div class="card-header">
+              <h3>Trending</h3>
+              <a href="#">View more <i class="fa-solid fa-arrow-right-long"></i></a>
+            </div>
+            <ul class="trending-list">
+              <li><span class="trending-item">MYX Finance</span><span class="up">+232.1%</span></li>
+              <li><span class="trending-item">OpenLedger</span><span class="up">+164.1%</span></li>
+              <li><span class="trending-item">Notcoin</span><span class="up">+1.2%</span></li>
+            </ul>
+          </div>
+          <div class="card trending-card">
+            <div class="card-header">
+              <h3>Top Gainers</h3>
+              <a href="#">View more <i class="fa-solid fa-arrow-right-long"></i></a>
+            </div>
+            <ul class="trending-list">
+              <li><span class="trending-item">MYX Finance</span><span class="up">+232.1%</span></li>
+              <li><span class="trending-item">Trusta AI</span><span class="up">+164.1%</span></li>
+              <li><span class="trending-item">Codatta</span><span class="up">+79.2%</span></li>
+            </ul>
+          </div>
+        </div>
       </div>
     </section>
     <section class="toolbar">
       <div class="container">
         <div class="toolRow">
-          <div class="chips">
-            <span class="chip active">All</span>
-            <span class="chip">Layer 1</span>
-            <span class="chip">DeFi</span>
-            <span class="chip">NFT</span>
-          </div>
-          <div class="stats">
-            <span>Market Cap: <strong>$4.02T</strong></span>
-            <span class="dot" ></span>
-            <span>24h Vol: <strong>$169.6B</strong></span>
-            <span class="dot" ></span>
-            <span>BTC Dom: <strong>57.8%</strong></span>
+          <div class="left-toolbar">
+            <span class="chip-icon-group">
+              <i class="fa-solid fa-sliders"></i>
+              <span class="chip active">All</span>
+            </span>
+            <span class="chip-icon-group">
+              <i class="fa-solid fa-lightbulb"></i>
+              <span class="chip">Highlights</span>
+            </span>
+            <span class="chip-icon-group">
+              <i class="fa-solid fa-list-ul"></i>
+              <span class="chip">Categories</span>
+            </span>
+            <span class="chip-icon-group">
+              <i class="fa-solid fa-wifi"></i>
+              <span class="chip">Internet of Things (IOT)</span>
+            </span>
+            <span class="chip-icon-group">
+              <i class="fa-solid fa-chart-bar"></i>
+              <span class="chip">Binance Wallet IDO</span>
+            </span>
+            <span class="chip-icon-group">
+              <i class="fa-solid fa-star"></i>
+              <span class="chip">Trending Card RWA Platform</span>
+            </span>
+            <a href="#" class="customize-link"><i class="fa-solid fa-gear"></i> Customize</a>
           </div>
         </div>
       </div>
@@ -81,61 +190,238 @@
             <thead>
               <tr>
                 <th>#</th>
+                <th class="favorite-col"></th>
                 <th>Coin</th>
+                <th>Buy</th>
                 <th>Price</th>
                 <th>1h</th>
                 <th>24h</th>
                 <th>7d</th>
-                <th>Market Cap</th>
                 <th>24h Volume</th>
-                <th>Circulating Supply</th>
+                <th>Market Cap</th>
+                <th>Last 7 Days</th>
               </tr>
             </thead>
             <tbody>
+              <!-- Row 1: Bitcoin -->
               <tr>
                 <td>1</td>
+                <td class="favorite-col"><i class="far fa-star"></i></td>
                 <td>
                   <div class="coin">
-                    <img src="./Bitcoin.png" alt="Bitcoin logo"/>
+                    <img src="https://placehold.co/32x32/ff7b00/ffffff?text=B" alt="Bitcoin logo"/>
+                    <div class="coin-info">
+                      <span class="name">Bitcoin</span>
+                      <span class="symbol">BTC</span>
+                    </div>
                   </div>
                 </td>
+                <td><button class="buy-btn">Buy</button></td>
                 <td>$67,543.00</td>
                 <td class="up">+0.12%</td>
                 <td class="up">+3.2%</td>
                 <td class="up">+6.1%</td>
-                <td>$1,329,000,000,000</td>
                 <td>$23,400,000,000</td>
-                <td>19,800,000 BTC</td>
+                <td>$1,329,000,000,000</td>
+                <td><img src="https://placehold.co/100x30/ffffff/000000?text=chart" alt="BTC Chart" class="sparkline-chart"></td>
               </tr>
+              <!-- Row 2: Ethereum -->
               <tr>
                 <td>2</td>
+                <td class="favorite-col"><i class="far fa-star"></i></td>
                 <td>
                   <div class="coin">
-                    <img src="./etherium.png" alt="Ethereum logo"/>
+                    <img src="https://placehold.co/32x32/00a0e3/ffffff?text=E" alt="Ethereum logo"/>
+                    <div class="coin-info">
+                      <span class="name">Ethereum</span>
+                      <span class="symbol">ETH</span>
+                    </div>
                   </div>
                 </td>
+                <td><button class="buy-btn">Buy</button></td>
                 <td>$3,421.00</td>
                 <td class="down">-0.21%</td>
                 <td class="down">-1.1%</td>
                 <td class="up">+4.3%</td>
-                <td>$412,000,000,000</td>
                 <td>$14,200,000,000</td>
-                <td>120,400,000 ETH</td>
+                <td>$412,000,000,000</td>
+                <td><img src="https://placehold.co/100x30/ffffff/000000?text=chart" alt="ETH Chart" class="sparkline-chart"></td>
               </tr>
+              <!-- Row 3: XRP -->
               <tr>
                 <td>3</td>
+                <td class="favorite-col"><i class="far fa-star"></i></td>
                 <td>
                   <div class="coin">
-                    <img src="./solana.png" alt="Solana logo"/>
+                    <img src="https://placehold.co/32x32/34a17f/ffffff?text=X" alt="XRP logo"/>
+                    <div class="coin-info">
+                      <span class="name">XRP</span>
+                      <span class="symbol">XRP</span>
+                    </div>
                   </div>
                 </td>
+                <td><button class="buy-btn">Buy</button></td>
+                <td>$0.52</td>
+                <td class="down">-0.5%</td>
+                <td class="up">+2.8%</td>
+                <td class="down">-1.4%</td>
+                <td>$8,500,000,000</td>
+                <td>$28,000,000,000</td>
+                <td><img src="https://placehold.co/100x30/ffffff/000000?text=chart" alt="XRP Chart" class="sparkline-chart"></td>
+              </tr>
+              <!-- Row 4: Solana -->
+              <tr>
+                <td>4</td>
+                <td class="favorite-col"><i class="far fa-star"></i></td>
+                <td>
+                  <div class="coin">
+                    <img src="https://placehold.co/32x32/9b59b6/ffffff?text=S" alt="Solana logo"/>
+                    <div class="coin-info">
+                      <span class="name">Solana</span>
+                      <span class="symbol">SOL</span>
+                    </div>
+                  </div>
+                </td>
+                <td><button class="buy-btn">Buy</button></td>
                 <td>$156.23</td>
                 <td class="up">+0.03%</td>
                 <td class="up">+5.7%</td>
                 <td class="up">+9.2%</td>
-                <td>$73,200,000,000</td>
                 <td>$2,800,000,000</td>
-                <td>468,500,000 SOL</td>
+                <td>$73,200,000,000</td>
+                <td><img src="https://placehold.co/100x30/ffffff/000000?text=chart" alt="SOL Chart" class="sparkline-chart"></td>
+              </tr>
+              <!-- Row 5: Dogecoin -->
+              <tr>
+                <td>5</td>
+                <td class="favorite-col"><i class="far fa-star"></i></td>
+                <td>
+                  <div class="coin">
+                    <img src="https://placehold.co/32x32/f1c40f/ffffff?text=D" alt="Dogecoin logo"/>
+                    <div class="coin-info">
+                      <span class="name">Dogecoin</span>
+                      <span class="symbol">DOGE</span>
+                    </div>
+                  </div>
+                </td>
+                <td><button class="buy-btn">Buy</button></td>
+                <td>$0.12</td>
+                <td class="up">+0.5%</td>
+                <td class="up">+1.5%</td>
+                <td class="up">+3.5%</td>
+                <td>$1,500,000,000</td>
+                <td>$17,000,000,000</td>
+                <td><img src="https://placehold.co/100x30/ffffff/000000?text=chart" alt="DOGE Chart" class="sparkline-chart"></td>
+              </tr>
+              <!-- Row 6: Cardano -->
+              <tr>
+                <td>6</td>
+                <td class="favorite-col"><i class="far fa-star"></i></td>
+                <td>
+                  <div class="coin">
+                    <img src="https://placehold.co/32x32/3498db/ffffff?text=A" alt="Cardano logo"/>
+                    <div class="coin-info">
+                      <span class="name">Cardano</span>
+                      <span class="symbol">ADA</span>
+                    </div>
+                  </div>
+                </td>
+                <td><button class="buy-btn">Buy</button></td>
+                <td>$0.45</td>
+                <td class="up">+0.01%</td>
+                <td class="down">-0.8%</td>
+                <td class="down">-2.1%</td>
+                <td>$500,000,000</td>
+                <td>$16,000,000,000</td>
+                <td><img src="https://placehold.co/100x30/ffffff/000000?text=chart" alt="ADA Chart" class="sparkline-chart"></td>
+              </tr>
+              <!-- Row 7: Tether -->
+              <tr>
+                <td>7</td>
+                <td class="favorite-col"><i class="far fa-star"></i></td>
+                <td>
+                  <div class="coin">
+                    <img src="https://placehold.co/32x32/27ae60/ffffff?text=T" alt="Tether logo"/>
+                    <div class="coin-info">
+                      <span class="name">Tether</span>
+                      <span class="symbol">USDT</span>
+                    </div>
+                  </div>
+                </td>
+                <td><button class="buy-btn">Buy</button></td>
+                <td>$1.00</td>
+                <td class="up">+0.00%</td>
+                <td class="up">+0.00%</td>
+                <td class="up">+0.00%</td>
+                <td>$45,000,000,000</td>
+                <td>$110,000,000,000</td>
+                <td><img src="https://placehold.co/100x30/ffffff/000000?text=chart" alt="USDT Chart" class="sparkline-chart"></td>
+              </tr>
+              <!-- Row 8: Chainlink -->
+              <tr>
+                <td>8</td>
+                <td class="favorite-col"><i class="far fa-star"></i></td>
+                <td>
+                  <div class="coin">
+                    <img src="https://placehold.co/32x32/2c3e50/ffffff?text=L" alt="Chainlink logo"/>
+                    <div class="coin-info">
+                      <span class="name">Chainlink</span>
+                      <span class="symbol">LINK</span>
+                    </div>
+                  </div>
+                </td>
+                <td><button class="buy-btn">Buy</button></td>
+                <td>$15.50</td>
+                <td class="up">+1.2%</td>
+                <td class="up">+4.3%</td>
+                <td class="up">+10.2%</td>
+                <td>$800,000,000</td>
+                <td>$9,500,000,000</td>
+                <td><img src="https://placehold.co/100x30/ffffff/000000?text=chart" alt="LINK Chart" class="sparkline-chart"></td>
+              </tr>
+              <!-- Row 9: Polygon -->
+              <tr>
+                <td>9</td>
+                <td class="favorite-col"><i class="far fa-star"></i></td>
+                <td>
+                  <div class="coin">
+                    <img src="https://placehold.co/32x32/9b59b6/ffffff?text=P" alt="Polygon logo"/>
+                    <div class="coin-info">
+                      <span class="name">Polygon</span>
+                      <span class="symbol">MATIC</span>
+                    </div>
+                  </div>
+                </td>
+                <td><button class="buy-btn">Buy</button></td>
+                <td>$0.75</td>
+                <td class="down">-0.5%</td>
+                <td class="down">-2.1%</td>
+                <td class="up">+3.5%</td>
+                <td>$400,000,000</td>
+                <td>$7,000,000,000</td>
+                <td><img src="https://placehold.co/100x30/ffffff/000000?text=chart" alt="MATIC Chart" class="sparkline-chart"></td>
+              </tr>
+              <!-- Row 10: Polkadot -->
+              <tr>
+                <td>10</td>
+                <td class="favorite-col"><i class="far fa-star"></i></td>
+                <td>
+                  <div class="coin">
+                    <img src="https://placehold.co/32x32/e74c3c/ffffff?text=P" alt="Polkadot logo"/>
+                    <div class="coin-info">
+                      <span class="name">Polkadot</span>
+                      <span class="symbol">DOT</span>
+                    </div>
+                  </div>
+                </td>
+                <td><button class="buy-btn">Buy</button></td>
+                <td>$6.80</td>
+                <td class="up">+0.3%</td>
+                <td class="up">+1.9%</td>
+                <td class="up">+8.4%</td>
+                <td>$350,000,000</td>
+                <td>$8,500,000,000</td>
+                <td><img src="https://placehold.co/100x30/ffffff/000000?text=chart" alt="DOT Chart" class="sparkline-chart"></td>
               </tr>
             </tbody>
           </table>
