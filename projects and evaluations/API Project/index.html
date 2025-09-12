@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CoinGecko Clone</title>
+  <link rel="stylesheet" href="homepage.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <div class="topbar" role="region">
+    <div class="container topbar_in">
+      <div class="stat"><span class="label">Coins:</span> <span class="value">16,849</span></div>
+      <div class="stat"><span class="label">Exchanges:</span> <span class="value">1,366</span></div>
+      <div class="stat"><span class="label">Market Cap:</span> <span class="value">$3.98T</span> <span class="pct pct-up">+1.1%</span></div>
+      <div class="stat hide"><span class="label">24h Vol:</span> <span class="value">$108.38B</span></div>
+      <div class="stat hide"><span class="label">Dominance:</span> <span class="value">BTC 56.3% • ETH 13.1%</span></div>
+      <div class="stat hide"><span class="label"><i class="fa-solid fa-fire"></i> Gas:</span> <span class="value">1,368 GWEI</span></div>
+    </div>
+  </div>
+
+  <header class="navbar" role="banner">
+    <div class="container nav_in">
+      <a href="index.html" class="brand" aria-label="CoinGecko Home">
+        <img src="https://placehold.co/32x32/ffffff/000000?text=CG" alt="CoinGecko" class="main-logo">
+        <span class="brand__name">coingecko</span>
+      </a>
+
+      <nav class="nav" role="navigation" aria-label="Main">
+        <ul class="navList">
+          <li class="navItem navItem--dropdown dropd" tabindex="0">
+          <a href="#" class="navLink navLink--crypto" aria-haspopup="true">
+          Cryptocurrencies <i class="fa-solid fa-caret-down" aria-hidden="true"></i>
+        </a>
+        <div class="dropdown" role="menu">
+          <a href="market-cap.html" class="dropdown__link dropdown-item">By Market Cap</a>
+          <a href="categories.html" class="dropdown__link dropdown-item">Categories</a>
+        </div>
+      </li>
+          <li class="navItem navItem--dropdown dropd">
+            <a href="#" class="navLink navLink--exchanges" aria-haspopup="true" aria-expanded="false">
+              Exchanges <i class="fa-solid fa-caret-down" aria-hidden="true"></i>
+            </a>
+            <div class="dropdown" role="menu">
+              <a href="crypto-exchanges.html" class="dropdown__link dropdown-item">Crypto Exchanges</a>
+              <a href="decentralized-exchanges.html" class="dropdown__link dropdown-item">Decentralized Exchanges</a>
+            </div>
+          </li>
+          <li class="navItem navItem--dropdown dropd">
+            <a href="#" class="navLink navLink--nft" aria-haspopup="true" aria-expanded="false">
+              NFT <i class="fa-solid fa-caret-down" aria-hidden="true"></i>
+            </a>
+            <div class="dropdown" role="menu">
+              <a href="nft-floor-price.html" class="dropdown__link dropdown-item">NFT Floor Price</a>
+              <a href="nft-related-coins.html" class="dropdown__link dropdown-item">NFT Related Coins</a>
+            </div>
+          </li>
+          <li class="navItem navItem--dropdown dropd">
+            <a href="#" class="navLink navLink--learn" aria-haspopup="true" aria-expanded="false">
+              Learn <i class="fa-solid fa-caret-down" aria-hidden="true"></i>
+            </a>
+            <div class="dropdown" role="menu">
+              <a href="learn-crypto.html" class="dropdown__link dropdown-item">Learn Crypto</a>
+              <a href="research-insights.html" class="dropdown__link dropdown-item">Research Insights</a>
+            </div>
+          </li>
+        </ul>
+      </nav>
+      <div class="header-right">
+        <div class="user-actions">
+          <button class="icon-btn"><i class="fa-solid fa-bell"></i></button>
+          <a href="#" class="icon-btn"><i class="fa-solid fa-right-to-bracket"></i></a>
+          <button class="sign-up-btn">Sign up</button>
+        </div>
+        <div class="search-box">
+          <i class="fa-solid fa-search search-icon"></i>
+          <input type="text" placeholder="Search" class="search-input">
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="main">
+    <section class="hero">
+      <div class="container">
+        <div class="page-header-row">
+          <h1 class="page-title">Cryptocurrency Prices by Market Cap</h1>
+          <div class="highlights">
+            <span>Highlights</span>
+            <i class="fa-solid fa-toggle-on"></i>
+          </div>
+        </div>
+        <p class="page-subtitle">The global crypto market cap is <strong class="mc-value">$3.98T</strong>, a <span class="pct pct-up">+1.1%</span> increase over the last day.</p>
+
+        <div class="stats-cards-row">
+          <div class="card">
+            <div class="card-header">
+              <h3>$3,968,220,888,737</h3>
+              <p>Market Cap <span class="pct pct-up">1.1%</span></p>
+            </div>
+            <div class="card-chart">
+              <i class="fa-solid fa-chart-line up-chart"></i>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header">
+              <h3>$108,367,774,311</h3>
+              <p>24h Trading Volume <span class="pct pct-up">60.8%</span></p>
+            </div>
+            <div class="card-chart">
+              <i class="fa-solid fa-chart-line up-chart"></i>
+            </div>
+          </div>
+          <div class="card trending-card">
+            <div class="card-header">
+              <h3><i class="fa-solid fa-fire"></i> Trending</h3>
+              <a href="#">View more <i class="fa-solid fa-arrow-right-long"></i></a>
+            </div>
+            <ul class="trending-list">
+              <li><span class="trending-item">MYX Finance</span><span class="pct pct-up">+6.55%</span></li>
+              <li><span class="trending-item">OpenLedger</span><span class="pct pct-up">+0.48%</span></li>
+              <li><span class="trending-item">Notcoin</span><span class="pct pct-up">+0.001974%</span></li>
+            </ul>
+          </div>
+          <div class="card trending-card">
+            <div class="card-header">
+              <h3>Top Gainers</h3>
+              <a href="#">View more <i class="fa-solid fa-arrow-right-long"></i></a>
+            </div>
+            <ul class="trending-list">
+              <li><span class="trending-item">MYX Finance</span><span class="pct pct-up">+6.55%</span></li>
+              <li><span class="trending-item">Trusta AI</span><span class="pct pct-up">+0.273%</span></li>
+              <li><span class="trending-item">Codatta</span><span class="pct pct-up">+0.01321%</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="coin-table">
+      <div class="container">
+        <div class="table-wrap">
+          <table class="table">
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>Coin</th>
+                <th>Price</th>
+                <th>1h</th>
+                <th>24h</th>
+                <th>7d</th>
+                <th>Market Cap</th>
+                <th>24h Volume</th>
+                <th>Circulating Supply</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>
+                  <div class="coin">
+                    <img src="https://placehold.co/32x32/d1c1e5/000000?text=BTC" alt="Bitcoin logo" />
+                    <span>Bitcoin <small>BTC</small></span>
+                  </div>
+                </td>
+                <td>$67,543.00</td>
+                <td class="up pct">+0.12%</td>
+                <td class="up pct">+3.2%</td>
+                <td class="up pct">+6.1%</td>
+                <td>$1,329,000,000,000</td>
+                <td>$23,400,000,000</td>
+                <td>19,800,000 BTC</td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>
+                  <div class="coin">
+                    <img src="https://placehold.co/32x32/d1c1e5/000000?text=ETH" alt="Ethereum logo" />
+                    <span>Ethereum <small>ETH</small></span>
+                  </div>
+                </td>
+                <td>$3,421.00</td>
+                <td class="down pct">-0.21%</td>
+                <td class="down pct">-1.1%</td>
+                <td class="up pct">+4.3%</td>
+                <td>$412,000,000,000</td>
+                <td>$14,200,000,000</td>
+                <td>120,400,000 ETH</td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>
+                  <div class="coin">
+                    <img src="https://placehold.co/32x32/d1c1e5/000000?text=SOL" alt="Solana logo" />
+                    <span>Solana <small>SOL</small></span>
+                  </div>
+                </td>
+                <td>$156.23</td>
+                <td class="up pct">+0.03%</td>
+                <td class="up pct">+5.7%</td>
+                <td class="up pct">+9.2%</td>
+                <td>$73,200,000,000</td>
+                <td>$2,800,000,000</td>
+                <td>468,500,000 SOL</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-row">
+      <p class="footer-copy">&copy; 2025 CoinGecko Clone | Built for practice</p>
+    </div>
+  </footer>
+
+</body>
+</html>
