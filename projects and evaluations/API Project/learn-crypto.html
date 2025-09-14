@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Learn Crypto - CoinGecko Clone</title>
+  <link rel="stylesheet" href="learn-crypto.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <div class="topbar" role="region">
+    <div class="lc-container topbar_in">
+      <div class="stat"><span class="label">Coins:</span> <span class="value">16,849</span></div>
+      <div class="stat"><span class="label">Exchanges:</span> <span class="value">1,366</span></div>
+      <div class="stat"><span class="label">Market Cap:</span> <span class="value">$3.98T</span> <span class="pct pct-up">+1.1%</span></div>
+      <div class="stat hide-mobile"><span class="label">24h Vol:</span> <span class="value">$108.38B</span></div>
+      <div class="stat hide-mobile"><span class="label">Dominance:</span> <span class="value">BTC 56.3% • ETH 13.1%</span></div>
+      <div class="stat hide-mobile"><span class="label"><i class="fa-solid fa-fire"></i> Gas:</span> <span class="value">1,368 GWEI</span></div>
+    </div>
+  </div>
+
+  <header class="lc-header" role="banner">
+    <div class="lc-container nav_in">
+      <a href="index.html" class="brand" aria-label="CoinGecko Home">
+        <img src="https://placehold.co/32x32/ffffff/000000?text=CG" alt="CoinGecko" class="main-logo">
+        <span class="brand__name">coingecko</span>
+      </a>
+
+      <nav class="nav" role="navigation" aria-label="Main">
+        <ul class="navList">
+          <li class="navItem navItem--dropdown dropd" tabindex="0">
+            <a href="#" class="navLink navLink--crypto" aria-haspopup="true" aria-expanded="false">
+              Cryptocurrencies <i class="fa-solid fa-caret-down" aria-hidden="true"></i>
+            </a>
+            <div class="dropdown" role="menu">
+              <a href="market-cap.html" class="dropdown__link dropdown-item">By Market Cap</a>
+              <a href="categories.html" class="dropdown__link dropdown-item">Categories</a>
+            </div>
+          </li>
+          <li class="navItem navItem--dropdown dropd" tabindex="0">
+            <a href="#" class="navLink navLink--exchanges" aria-haspopup="true" aria-expanded="false">
+              Exchanges <i class="fa-solid fa-caret-down" aria-hidden="true"></i>
+            </a>
+            <div class="dropdown" role="menu">
+              <a href="crypto-exchanges.html" class="dropdown__link dropdown-item">Crypto Exchanges</a>
+              <a href="decentralized-exchanges.html" class="dropdown__link dropdown-item">Decentralized Exchanges</a>
+            </div>
+          </li>
+          <li class="navItem navItem--dropdown dropd" tabindex="0">
+            <a href="#" class="navLink navLink--nft" aria-haspopup="true" aria-expanded="false">
+              NFT <i class="fa-solid fa-caret-down" aria-hidden="true"></i>
+            </a>
+            <div class="dropdown" role="menu">
+              <a href="nft-floor-price.html" class="dropdown__link dropdown-item">NFT Floor Price</a>
+              <a href="nft-related-coins.html" class="dropdown__link dropdown-item">NFT Related Coins</a>
+            </div>
+          </li>
+          <li class="navItem navItem--dropdown dropd" tabindex="0">
+            <a href="#" class="navLink navLink--learn is-current" aria-haspopup="true" aria-current="page">
+              Learn <i class="fa-solid fa-caret-down" aria-hidden="true"></i>
+            </a>
+            <div class="dropdown" role="menu">
+              <a href="learn-crypto.html" class="dropdown__link dropdown-item">Learn Crypto</a>
+              <a href="research-insights.html" class="dropdown__link dropdown-item">Research Insights</a>
+            </div>
+          </li>
+        </ul>
+      </nav>
+      <div class="header-right">
+        <div class="user-actions">
+          <button class="icon-btn"><i class="fa-solid fa-bell"></i></button>
+          <a href="#" class="icon-btn"><i class="fa-solid fa-right-to-bracket"></i></a>
+          <button class="sign-up-btn">Sign up</button>
+        </div>
+        <div class="search-box">
+          <i class="fa-solid fa-search search-icon"></i>
+          <input type="text" placeholder="Search" class="search-input">
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="lc-main-content">
+    <section class="lc-hero">
+      <div class="lc-container">
+        <h1 class="lc-hero__title">Learn Crypto</h1>
+        <p class="lc-hero__subtitle">Educational resources and guides for cryptocurrency beginners and experts</p>
+      </div>
+    </section>
+
+    <section class="lc-toolbar">
+      <div class="lc-container">
+        <div class="lc-toolbar-row">
+          <div class="lc-field">
+            <label class="lc-field__label">Search Articles</label>
+            <input type="text" class="lc-input" placeholder="Search crypto guides...">
+          </div>
+          <div class="lc-field">
+            <label class="lc-field__label">Category</label>
+            <select class="lc-select">
+              <option>All Categories</option>
+              <option>Beginner</option>
+              <option>Advanced</option>
+              <option>Trading</option>
+              <option>DeFi</option>
+            </select>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="lc-table-section">
+      <div class="lc-container">
+        <div class="lc-table-wrap">
+          <table class="lc-table">
+            <thead>
+              <tr>
+                <th>Article</th>
+                <th>Category</th>
+                <th>Difficulty</th>
+                <th>Reading Time</th>
+                <th>Published</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>What is Bitcoin?</td>
+                <td><span class="lc-badge lc-badge--beginner">Beginner</span></td>
+                <td>Easy</td>
+                <td>5 min</td>
+                <td>Dec 15, 2024</td>
+              </tr>
+              <tr>
+                <td>Understanding Blockchain Technology</td>
+                <td><span class="lc-badge lc-badge--beginner">Beginner</span></td>
+                <td>Easy</td>
+                <td>8 min</td>
+                <td>Dec 14, 2024</td>
+              </tr>
+              <tr>
+                <td>DeFi Explained: Decentralized Finance</td>
+                <td><span class="lc-badge lc-badge--advanced">Advanced</span></td>
+                <td>Medium</td>
+                <td>12 min</td>
+                <td>Dec 13, 2024</td>
+              </tr>
+              <tr>
+                <td>How to Trade Cryptocurrency</td>
+                <td><span class="lc-badge lc-badge--trading">Trading</span></td>
+                <td>Medium</td>
+                <td>15 min</td>
+                <td>Dec 12, 2024</td>
+              </tr>
+              <tr>
+                <td>Smart Contracts and Ethereum</td>
+                <td><span class="lc-badge lc-badge--advanced">Advanced</span></td>
+                <td>Hard</td>
+                <td>20 min</td>
+                <td>Dec 11, 2024</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="lc-note">Browse our comprehensive library of cryptocurrency educational content</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="lc-footer">
+    <div class="lc-container">
+      <div class="lc-footer-row">
+        <p class="lc-copy">&copy; 2024 CoinGecko Clone. All rights reserved.</p>
+        <nav class="lc-footnav">
+          <ul class="lc-footnav__list">
+            <li><a href="#" class="lc-footnav__link">Privacy</a></li>
+            <li><a href="#" class="lc-footnav__link">Terms</a></li>
+            <li><a href="#" class="lc-footnav__link">Support</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
