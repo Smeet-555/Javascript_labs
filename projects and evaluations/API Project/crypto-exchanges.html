@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Crypto Exchanges | CoinClone</title>
+  <link rel="stylesheet" href="crypto-exchanges.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- ===== Top Stats Header ===== -->
+  <div class="top-header">
+    <div class="container topbar_in">
+      <div class="stat"><span class="label">Coins:</span> <span class="value">16,849</span></div>
+      <div class="stat"><span class="label">Exchanges:</span> <span class="value">1,366</span></div>
+      <div class="stat"><span class="label">Market Cap:</span> <span class="value">$3.98T</span> <span class="pct pct-up">+1.1%</span></div>
+      <div class="stat hide-mobile"><span class="label">24h Vol:</span> <span class="value">$108.38B</span></div>
+      <div class="stat hide-mobile"><span class="label">Dominance:</span> <span class="value">BTC 56.3% • ETH 13.1%</span></div>
+      <div class="stat hide-mobile"><span class="label"><i class="fa-solid fa-fire"></i> Gas:</span> <span class="value">1,368 GWEI</span></div>
+    </div>
+  </div>
+
+  <!-- ===== Main Navbar ===== -->
+  <nav class="navbar">
+    <div class="container nav_in">
+      <a href="homepage.html" class="brand" aria-label="CoinGecko Home">
+        <img src="https://placehold.co/32x32/ffffff/000000?text=CG" alt="CoinGecko" class="main-logo">
+        <span class="brand__name">coingecko</span>
+      </a>
+
+      <nav class="nav" role="navigation" aria-label="Main">
+        <ul class="navList">
+          <li class="navItem navItem--dropdown dropd">
+            <a href="market-cap.html" class="navLink navLink--crypto" aria-haspopup="true" aria-expanded="false">
+              Cryptocurrencies <i class="fa-solid fa-caret-down" aria-hidden="true"></i>
+            </a>
+            <div class="dropdown" role="menu">
+              <a href="market-cap.html" class="dropdown__link dropdown-item">By Market Cap</a>
+              <a href="categories.html" class="dropdown__link dropdown-item">Categories</a>
+            </div>
+          </li>
+          <li class="navItem navItem--dropdown dropd">
+            <a href="#" class="navLink navLink--exchanges is-current" aria-haspopup="true" aria-expanded="false" aria-current="page">
+              Exchanges <i class="fa-solid fa-caret-down" aria-hidden="true"></i>
+            </a>
+            <div class="dropdown" role="menu">
+              <a href="crypto-exchanges.html" class="dropdown__link dropdown-item">Crypto Exchanges</a>
+              <a href="decentralized-exchanges.html" class="dropdown__link dropdown-item">Decentralized Exchanges</a>
+            </div>
+          </li>
+          <li class="navItem navItem--dropdown dropd">
+            <a href="#" class="navLink navLink--nft" aria-haspopup="true" aria-expanded="false">
+              NFT <i class="fa-solid fa-caret-down" aria-hidden="true"></i>
+            </a>
+            <div class="dropdown" role="menu">
+              <a href="nft-floor-price.html" class="dropdown__link dropdown-item">NFT Floor Price</a>
+              <a href="nft-related-coins.html" class="dropdown__link dropdown-item">NFT Related Coins</a>
+            </div>
+          </li>
+          <li class="navItem navItem--dropdown dropd">
+            <a href="#" class="navLink navLink--learn" aria-haspopup="true" aria-expanded="false">
+              Learn <i class="fa-solid fa-caret-down" aria-hidden="true"></i>
+            </a>
+            <div class="dropdown" role="menu">
+              <a href="learn-crypto.html" class="dropdown__link dropdown-item">Learn Crypto</a>
+              <a href="research-insights.html" class="dropdown__link dropdown-item">Research Insights</a>
+            </div>
+          </li>
+        </ul>
+      </nav>
+      <div class="header-right">
+        <div class="user-actions">
+          <button class="icon-btn"><i class="fa-solid fa-bell"></i></button>
+          <a href="#" class="icon-btn"><i class="fa-solid fa-right-to-bracket"></i></a>
+          <button class="sign-up-btn">Sign up</button>
+        </div>
+        <div class="search-box">
+          <i class="fa-solid fa-search search-icon"></i>
+          <input type="text" placeholder="Search" class="search-input">
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ===== Hero Title ===== -->
+  <section class="hero">
+    <div class="container">
+      <h1>Top Cryptocurrency Exchanges Ranking by Trust Score</h1>
+      <p>CoinClone ranks and scores exchanges based on traffic, liquidity, trading volumes, and confidence in reported volumes.</p>
+    </div>
+  </section>
+
+  <!-- ===== Tabs ===== -->
+  <div class="tabs">
+    <div class="container tab-container">
+      <a href="crypto-exchanges.html" class="tab active">Crypto Exchanges</a>
+      <a href="decentralized-exchanges.html" class="tab">Decentralized Exchanges</a>
+    </div>
+  </div>
+
+  <!-- ===== Exchanges Table ===== -->
+  <main class="table-section">
+    <div class="container">
+      <table class="exchange-table">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Exchange</th>
+            <th>Trust Score</th>
+            <th>24h Volume</th>
+            <th>Markets</th>
+            <th>Coins</th>
+            <th>Country</th>
+            <th>7d Chart</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td class="exchange">
+              <img src="https://placehold.co/24x24/d1c1e5/000000?text=B" alt="Binance">
+              Binance
+            </td>
+            <td><span class="badge high">10</span></td>
+            <td>$12.4B</td>
+            <td>1600</td>
+            <td>400</td>
+            <td>Global</td>
+            <td><img src="https://placehold.co/100x30/ffffff/000000?text=chart" alt="7d"></td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td class="exchange">
+              <img src="https://placehold.co/24x24/d1c1e5/000000?text=C" alt="Coinbase"> Coinbase
+            </td>
+            <td><span class="badge high">9</span></td>
+            <td>$1.9B</td>
+            <td>620</td>
+            <td>250</td>
+            <td>US</td>
+            <td><img src="https://placehold.co/100x30/ffffff/000000?text=chart" alt="7d"></td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td class="exchange">
+              <img src="https://placehold.co/24x24/d1c1e5/000000?text=K" alt="Kraken"> Kraken
+            </td>
+            <td><span class="badge high">9</span></td>
+            <td>$1.2B</td>
+            <td>520</td>
+            <td>240</td>
+            <td>US</td>
+            <td><img src="https://placehold.co/100x30/ffffff/000000?text=chart" alt="7d"></td>
+          </tr>
+          <tr>
+            <td>4</td>
+            <td class="exchange">
+              <img src="https://placehold.co/24x24/d1c1e5/000000?text=K" alt="KuCoin"> KuCoin
+            </td>
+            <td><span class="badge medium">8</span></td>
+            <td>$1.0B</td>
+            <td>750</td>
+            <td>350</td>
+            <td>SG</td>
+            <td><img src="https://placehold.co/100x30/ffffff/000000?text=chart" alt="7d"></td>
+          </tr>
+          <tr>
+            <td>5</td>
+            <td class="exchange">
+              <img src="https://placehold.co/24x24/d1c1e5/000000?text=O" alt="OKX"> OKX
+            </td>
+            <td><span class="badge medium">8</span></td>
+            <td>$950M</td>
+            <td>690</td>
+            <td>320</td>
+            <td>Global</td>
+            <td><img src="https://placehold.co/100x30/ffffff/000000?text=chart" alt="7d"></td>
+          </tr>
+          <tr>
+            <td>6</td>
+            <td class="exchange">
+              <img src="https://placehold.co/24x24/d1c1e5/000000?text=B" alt="Bitfinex"> Bitfinex
+            </td>
+            <td><span class="badge medium">7</span></td>
+            <td>$750M</td>
+            <td>480</td>
+            <td>200</td>
+            <td>HK</td>
+            <td><img src="https://placehold.co/100x30/ffffff/000000?text=chart" alt="7d"></td>
+          </tr>
+          <tr>
+            <td>7</td>
+            <td class="exchange">
+              <img src="https://placehold.co/24x24/d1c1e5/000000?text=B" alt="Bybit"> Bybit
+            </td>
+            <td><span class="badge medium">7</span></td>
+            <td>$680M</td>
+            <td>420</td>
+            <td>180</td>
+            <td>Global</td>
+            <td><img src="https://placehold.co/100x30/ffffff/000000?text=chart" alt="7d"></td>
+          </tr>
+          <tr>
+            <td>8</td>
+            <td class="exchange">
+              <img src="https://placehold.co/24x24/d1c1e5/000000?text=G" alt="Gate.io"> Gate.io
+            </td>
+            <td><span class="badge low">6</span></td>
+            <td>$540M</td>
+            <td>390</td>
+            <td>170</td>
+            <td>Global</td>
+            <td><img src="https://placehold.co/100x30/ffffff/000000?text=chart" alt="7d"></td>
+          </tr>
+          <tr>
+            <td>9</td>
+            <td class="exchange">
+              <img src="https://placehold.co/24x24/d1c1e5/000000?text=B" alt="Bitstamp"> Bitstamp
+            </td>
+            <td><span class="badge low">6</span></td>
+            <td>$410M</td>
+            <td>260</td>
+            <td>150</td>
+            <td>EU</td>
+            <td><img src="https://placehold.co/100x30/ffffff/000000?text=chart" alt="7d"></td>
+          </tr>
+          <tr>
+            <td>10</td>
+            <td class="exchange">
+              <img src="https://placehold.co/24x24/d1c1e5/000000?text=G" alt="Gemini"> Gemini
+            </td>
+            <td><span class="badge low">5</span></td>
+            <td>$320M</td>
+            <td>180</td>
+            <td>100</td>
+            <td>US</td>
+            <td><img src="https://placehold.co/100x30/ffffff/000000?text=chart" alt="7d"></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </main>
+
+  <!-- ===== Footer ===== -->
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2025 CoinGecko Clone. Built for practice.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
