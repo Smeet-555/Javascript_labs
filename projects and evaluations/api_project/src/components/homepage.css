@@ -1,16 +1,24 @@
 * {
   box-sizing: border-box;
 }
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+}
 html,
 body {
   margin: 0;
   padding: 0;
+  width: 100%;
+  overflow-x: hidden;
 }
 body {
   font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
   color: #111827;
   background: #ffffff;
   line-height: 1.5;
+  width: 100%;
 }
 a {
   color: inherit;
@@ -38,6 +46,9 @@ a {
   background: #111827;
   color: #e5e7eb;
   font-size: 14px;
+  width: 100%;
+  left: 0;
+  right: 0;
 }
 .topbar_in {
   display: flex;
@@ -71,6 +82,9 @@ a {
   z-index: 50;
   background: #ffffff;
   border-bottom: 1px solid #e5e7eb;
+  width: 100%;
+  left: 0;
+  right: 0;
 }
 .nav_in {
   display: flex;
@@ -183,6 +197,7 @@ a {
   padding: 8px 12px 8px 36px;
   width: 200px;
   outline: none;
+  background: #ffffff;
   transition: border-color 0.3s;
 }
 
@@ -202,7 +217,9 @@ a {
   z-index: 60;
   display: none;
 }
-.navItem:hover > .dropdown {
+
+/* Show dropdown when React state controls it */
+.navItem--dropdown .dropdown {
   display: block;
 }
 
@@ -333,6 +350,12 @@ a {
   font-size: 14px;
 }
 
+/* Main content */
+.main {
+  min-height: calc(100vh - 64px);
+  width: 100%;
+}
+
 /* Main table */
 .coin-table {
   background: #fff;
@@ -405,6 +428,7 @@ a {
   border-top: 1px solid #e5e7eb;
   background: #fff;
   padding-bottom: 24px;
+  width: 100%;
 }
 
 .footer-row {
