@@ -11,7 +11,7 @@ const Categories = () => {
     fetch(API_URLS.CATEGORIES)
       .then(response => response.json())
       .then(data => {
-        setCategories(data.slice(0, 10));
+        setCategories(data.slice(0, 5));
         setLoading(false);
       });
   }, []);

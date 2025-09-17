@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Research Insights - CoinGecko Clone</title>
+  <link rel="stylesheet" href="research-insights.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <div class="topbar" role="region">
+    <div class="ri-container topbar_in">
+      <div class="stat"><span class="label">Coins:</span> <span class="value">16,849</span></div>
+      <div class="stat"><span class="label">Exchanges:</span> <span class="value">1,366</span></div>
+      <div class="stat"><span class="label">Market Cap:</span> <span class="value">$3.98T</span> <span class="pct pct-up">+1.1%</span></div>
+      <div class="stat hide-mobile"><span class="label">24h Vol:</span> <span class="value">$108.38B</span></div>
+      <div class="stat hide-mobile"><span class="label">Dominance:</span> <span class="value">BTC 56.3% • ETH 13.1%</span></div>
+      <div class="stat hide-mobile"><span class="label"><i class="fa-solid fa-fire"></i> Gas:</span> <span class="value">1,368 GWEI</span></div>
+    </div>
+  </div>
+
+  <header class="ri-header" role="banner">
+    <div class="ri-container nav_in">
+      <a href="index.html" class="brand" aria-label="CoinGecko Home">
+        <img src="https://placehold.co/32x32/ffffff/000000?text=CG" alt="CoinGecko" class="main-logo">
+        <span class="brand__name">coingecko</span>
+      </a>
+
+      <nav class="nav" role="navigation" aria-label="Main">
+        <ul class="navList">
+          <li class="navItem navItem--dropdown dropd" tabindex="0">
+            <a href="#" class="navLink navLink--crypto" aria-haspopup="true" aria-expanded="false">
+              Cryptocurrencies <i class="fa-solid fa-caret-down" aria-hidden="true"></i>
+            </a>
+            <div class="dropdown" role="menu">
+              <a href="market-cap.html" class="dropdown__link dropdown-item">By Market Cap</a>
+              <a href="categories.html" class="dropdown__link dropdown-item">Categories</a>
+            </div>
+          </li>
+          <li class="navItem navItem--dropdown dropd" tabindex="0">
+            <a href="#" class="navLink navLink--exchanges" aria-haspopup="true" aria-expanded="false">
+              Exchanges <i class="fa-solid fa-caret-down" aria-hidden="true"></i>
+            </a>
+            <div class="dropdown" role="menu">
+              <a href="crypto-exchanges.html" class="dropdown__link dropdown-item">Crypto Exchanges</a>
+              <a href="decentralized-exchanges.html" class="dropdown__link dropdown-item">Decentralized Exchanges</a>
+            </div>
+          </li>
+          <li class="navItem navItem--dropdown dropd" tabindex="0">
+            <a href="#" class="navLink navLink--nft" aria-haspopup="true" aria-expanded="false">
+              NFT <i class="fa-solid fa-caret-down" aria-hidden="true"></i>
+            </a>
+            <div class="dropdown" role="menu">
+              <a href="nft-floor-price.html" class="dropdown__link dropdown-item">NFT Floor Price</a>
+              <a href="nft-related-coins.html" class="dropdown__link dropdown-item">NFT Related Coins</a>
+            </div>
+          </li>
+          <li class="navItem navItem--dropdown dropd" tabindex="0">
+            <a href="#" class="navLink navLink--learn is-current" aria-haspopup="true" aria-current="page">
+              Learn <i class="fa-solid fa-caret-down" aria-hidden="true"></i>
+            </a>
+            <div class="dropdown" role="menu">
+              <a href="learn-crypto.html" class="dropdown__link dropdown-item">Learn Crypto</a>
+              <a href="research-insights.html" class="dropdown__link dropdown-item">Research Insights</a>
+            </div>
+          </li>
+        </ul>
+      </nav>
+      <div class="header-right">
+        <div class="user-actions">
+          <button class="icon-btn"><i class="fa-solid fa-bell"></i></button>
+          <a href="#" class="icon-btn"><i class="fa-solid fa-right-to-bracket"></i></a>
+          <button class="sign-up-btn">Sign up</button>
+        </div>
+        <div class="search-box">
+          <i class="fa-solid fa-search search-icon"></i>
+          <input type="text" placeholder="Search" class="search-input">
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="ri-main-content">
+    <section class="ri-hero">
+      <div class="ri-container">
+        <h1 class="ri-hero__title">Research Insights</h1>
+        <p class="ri-hero__subtitle">In-depth analysis and market research reports on cryptocurrency trends</p>
+      </div>
+    </section>
+
+    <section class="ri-toolbar">
+      <div class="ri-container">
+        <div class="ri-toolbar-row">
+          <div class="ri-field">
+            <label class="ri-field__label">Search Reports</label>
+            <input type="text" class="ri-input" placeholder="Search research reports...">
+          </div>
+          <div class="ri-field">
+            <label class="ri-field__label">Report Type</label>
+            <select class="ri-select">
+              <option>All Reports</option>
+              <option>Market Analysis</option>
+              <option>Technical Analysis</option>
+              <option>Fundamental Analysis</option>
+              <option>Trend Reports</option>
+            </select>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="ri-table-section">
+      <div class="ri-container">
+        <div class="ri-table-wrap">
+          <table class="ri-table">
+            <thead>
+              <tr>
+                <th>Report Title</th>
+                <th>Type</th>
+                <th>Author</th>
+                <th>Pages</th>
+                <th>Published</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Q4 2024 Crypto Market Outlook</td>
+                <td><span class="ri-badge ri-badge--market">Market Analysis</span></td>
+                <td>Research Team</td>
+                <td>45</td>
+                <td>Dec 15, 2024</td>
+              </tr>
+              <tr>
+                <td>Bitcoin Technical Analysis Report</td>
+                <td><span class="ri-badge ri-badge--technical">Technical</span></td>
+                <td>John Smith</td>
+                <td>28</td>
+                <td>Dec 14, 2024</td>
+              </tr>
+              <tr>
+                <td>DeFi Ecosystem Growth Study</td>
+                <td><span class="ri-badge ri-badge--fundamental">Fundamental</span></td>
+                <td>Sarah Johnson</td>
+                <td>62</td>
+                <td>Dec 13, 2024</td>
+              </tr>
+              <tr>
+                <td>Altcoin Season Prediction Model</td>
+                <td><span class="ri-badge ri-badge--trend">Trend Report</span></td>
+                <td>Mike Chen</td>
+                <td>35</td>
+                <td>Dec 12, 2024</td>
+              </tr>
+              <tr>
+                <td>Institutional Adoption Trends</td>
+                <td><span class="ri-badge ri-badge--market">Market Analysis</span></td>
+                <td>Research Team</td>
+                <td>52</td>
+                <td>Dec 11, 2024</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="ri-note">Access professional-grade cryptocurrency research and market insights</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="ri-footer">
+    <div class="ri-container">
+      <div class="ri-footer-row">
+        <p class="ri-copy">&copy; 2024 CoinGecko Clone. All rights reserved.</p>
+        <nav class="ri-footnav">
+          <ul class="ri-footnav__list">
+            <li><a href="#" class="ri-footnav__link">Privacy</a></li>
+            <li><a href="#" class="ri-footnav__link">Terms</a></li>
+            <li><a href="#" class="ri-footnav__link">Support</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

@@ -7,14 +7,16 @@ function Homepage() {
   const [coins, setCoins] = useState([]);
   const [loading, setLoading] = useState(true);
 
-  useEffect(() => {
-    fetch(API_URLS.COINS)
-      .then(response => response.json())
-      .then(data => {
-        setCoins(data.slice(0, 3));
-        setLoading(false);
-      });
-  }, []);
+useEffect(() => {
+  const handleClickOutside = (e) => {
+    if (!e.target.closest('.dropd')) {
+      setOpenDropdown(null);
+    }
+  };
+  document.addEventListener('mousedown', handleClickOutside);
+  return () => document.removeEventListener('mousedown', handleClickOutside);
+}, []);
+
 
   const toggleDropdown = (menu) => {
     setOpenDropdown(openDropdown === menu ? null : menu);
@@ -22,7 +24,6 @@ function Homepage() {
 
   return (
     <div>
-      {/* Topbar */}
       <div className="topbar" role="region">
         <div className="container topbar_in">
           <div className="stat">
@@ -55,7 +56,6 @@ function Homepage() {
         </div>
       </div>
 
-      {/* Navbar */}
       <header className="navbar" role="banner">
         <div className="container nav_in">
           <Link to="/" className="brand" aria-label="CoinGecko Home">
@@ -69,7 +69,6 @@ function Homepage() {
 
           <nav className="nav" role="navigation" aria-label="Main">
             <ul className="navList">
-              {/* Cryptocurrencies */}
               <li className="navItem navItem--dropdown dropd">
                 <a
                   href="#"
@@ -84,13 +83,24 @@ function Homepage() {
                 </a>
                 {openDropdown === 'crypto' && (
                   <div className="dropdown" role="menu">
-                    <Link to="/market-cap" className="dropdown-item">By Market Cap</Link>
-                    <Link to="/categories" className="dropdown-item">Categories</Link>
+                    <Link 
+                      to="/market-cap" 
+                      className="dropdown-item"
+                      onClick={() => setOpenDropdown(null)}
+                    >
+                      By Market Cap
+                    </Link>
+                    <Link 
+                      to="/categories" 
+                      className="dropdown-item"
+                      onClick={() => setOpenDropdown(null)}
+                    >
+                      Categories
+                    </Link>
                   </div>
                 )}
               </li>
 
-              {/* Exchanges */}
               <li className="navItem navItem--dropdown dropd">
                 <a
                   href="#"
@@ -104,13 +114,24 @@ function Homepage() {
                 </a>
                 {openDropdown === 'exchanges' && (
                   <div className="dropdown" role="menu">
-                    <Link to="/crypto-exchanges" className="dropdown-item">Crypto Exchanges</Link>
-                    <Link to="/decentralized-exchanges" className="dropdown-item">Decentralized Exchanges</Link>
+                    <Link 
+                      to="/crypto-exchanges" 
+                      className="dropdown-item"
+                      onClick={() => setOpenDropdown(null)}
+                    >
+                      Crypto Exchanges
+                    </Link>
+                    <Link 
+                      to="/decentralized-exchanges" 
+                      className="dropdown-item"
+                      onClick={() => setOpenDropdown(null)}
+                    >
+                      Decentralized Exchanges
+                    </Link>
                   </div>
                 )}
               </li>
 
-              {/* NFT */}
               <li className="navItem navItem--dropdown dropd">
                 <a
                   href="#"
@@ -124,13 +145,24 @@ function Homepage() {
                 </a>
                 {openDropdown === 'nft' && (
                   <div className="dropdown" role="menu">
-                    <Link to="/nft-floor-price" className="dropdown-item">NFT Floor Price</Link>
-                    <Link to="/nft-related-coins" className="dropdown-item">NFT Related Coins</Link>
+                    <Link 
+                      to="/nft-floor-price" 
+                      className="dropdown-item"
+                      onClick={() => setOpenDropdown(null)}
+                    >
+                      NFT Floor Price
+                    </Link>
+                    <Link 
+                      to="/nft-related-coins" 
+                      className="dropdown-item"
+                      onClick={() => setOpenDropdown(null)}
+                    >
+                      NFT Related Coins
+                    </Link>
                   </div>
                 )}
               </li>
 
-              {/* Learn */}
               <li className="navItem navItem--dropdown dropd">
                 <a
                   href="#"
@@ -144,15 +176,26 @@ function Homepage() {
                 </a>
                 {openDropdown === 'learn' && (
                   <div className="dropdown" role="menu">
-                    <Link to="/learn-crypto" className="dropdown-item">Learn Crypto</Link>
-                    <Link to="/research-insights" className="dropdown-item">Research Insights</Link>
+                    <Link 
+                      to="/learn-crypto" 
+                      className="dropdown-item"
+                      onClick={() => setOpenDropdown(null)}
+                    >
+                      Learn Crypto
+                    </Link>
+                    <Link 
+                      to="/research-insights" 
+                      className="dropdown-item"
+                      onClick={() => setOpenDropdown(null)}
+                    >
+                      Research Insights
+                    </Link>
                   </div>
                 )}
               </li>
             </ul>
           </nav>
 
-          {/* Header Right */}
           <div className="header-right">
             <div className="user-actions">
               <button className="icon-btn">
@@ -262,7 +305,8 @@ function Homepage() {
         <section className="coin-table">
           <div className="container">
             <div className="table-wrap">
-              <table className="table">
+              <div className="table-scroll-container">
+                <table className="table">
                 <thead>
                   <tr>
                     <th>#</th>
@@ -310,7 +354,8 @@ function Homepage() {
                     ))
                   )}
                 </tbody>
-              </table>
+                </table>
+              </div>
             </div>
           </div>
         </section>

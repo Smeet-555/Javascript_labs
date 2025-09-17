@@ -1,0 +1,17 @@
+.sparkline-chart {
+  display: block;
+}
+
+.sparkline-placeholder {
+  font-size: 16px;
+  text-align: center;
+  opacity: 0.6;
+}
+
+.sparkline-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 100px;
+  height: 40px;
+}
